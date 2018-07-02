@@ -1,0 +1,28 @@
+{
+  "name": "star-markdown-css",
+  "version": "0.0.1",
+  "description": "Markdown Css about violet wandering planet.",
+  "main": "star-markdown.css",
+  "repository": "https://github.com/YunYouJun/star-markdown-css.git",
+  "author": "YunYouJun <me@yunyoujun.cn>",
+  "license": "MIT",
+  "keywords": [
+    "browser",
+    "markdown",
+    "md",
+    "css",
+    "scss",
+    "style",
+    "stylesheet",
+    "star",
+    "planet"
+  ],
+  "scripts": {
+    "start": "echo `A Wandering Planet.`"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "webpack": "^4.14.0"
+  }
+}
