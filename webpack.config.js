@@ -1,23 +1,40 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MODE = process.env.NODE_ENV || 'development'
 
-module.exports = {
-    module: {
-        rules: [{
-            test: /\.scss$/,
-            use: [
-                // fallback to style-loader in development
-                process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-                "css-loader",
-                "sass-loader"
-            ]
-        }]
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        })
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+
+const css = {
+  mode: MODE,
+  entry: {
+    'star-markdown': path.resolve(__dirname, 'src/scss/star-markdown.scss')
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true // set to true if you want JS source maps
+      }),
+      new OptimizeCSSAssetsPlugin({})
     ]
-};
+  },
+  module: {
+    rules: [{
+      test: /\.(sa|sc|c)ss$/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'sass-loader',
+      ],
+    }]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    })
+  ]
+}
+
+module.exports = [css]
