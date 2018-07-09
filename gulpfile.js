@@ -101,8 +101,14 @@ gulp.task('scss', function () {
     .pipe(gulp.dest(bases.dist))
 })
 
+gulp.task('html', function(){
+  return gulp.src(bases.demo + '*.html')
+    .pipe(reload({stream:true}))
+})
+
 gulp.task('watch', function() {
-  gulp.watch(bases.src + 'scss/**/*.scss', ['scss'])
+  gulp.watch(bases.src + 'scss/**/*.scss', ['scss', 'copy'])
+  gulp.watch(bases.demo + '*.html', ['html'])
 })
 
 gulp.task('copy', function() {
@@ -110,7 +116,7 @@ gulp.task('copy', function() {
   gulp.src(bases.dist + '*')
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(gulp.dest(bases.demo + 'css'))
-    .pipe(reload({stream:true}));
+    .pipe(reload({stream:true}))
 })
 
 // BUILD TASKS
