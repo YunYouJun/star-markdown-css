@@ -106,9 +106,15 @@ gulp.task('html', function(){
     .pipe(reload({stream:true}))
 })
 
+gulp.task('md', function(){
+  return gulp.src(bases.demo + '*.md')
+    .pipe(reload({stream:true}))
+})
+
 gulp.task('watch', function() {
   gulp.watch(bases.src + 'scss/**/*.scss', ['scss', 'copy'])
   gulp.watch(bases.demo + '*.html', ['html'])
+  gulp.watch(bases.demo + '*.md', ['md'])
 })
 
 gulp.task('copy', function() {
