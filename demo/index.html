@@ -78,10 +78,24 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
+    let rendererMD = new marked.Renderer();
+    rendererMD.listitem = function (text) {
+        if (text.indexOf('type="checkbox"')!==-1) {
+          return `
+            <li class="task-list-item">
+              ${text}
+            </li>`;
+        }
+        return `
+            <li>
+              ${text}
+            </li>`;
+    }
+
     axios.get('/demo.md')
       .then(function (response) {
         console.log(response);
-        document.getElementById('demo-content').innerHTML = marked(response.data);
+        document.getElementById('demo-content').innerHTML = marked(response.data, { renderer: rendererMD });
       })
       .catch(function (error) {
         // handle error
