@@ -92,9 +92,8 @@
             </li>`;
     }
 
-    axios.get('/demo.md')
+    axios.get('./demo.md')
       .then(function (response) {
-        console.log(response);
         document.getElementById('demo-content').innerHTML = marked(response.data, { renderer: rendererMD });
       })
       .catch(function (error) {
