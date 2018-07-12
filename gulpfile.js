@@ -91,6 +91,7 @@ gulp.task('scss', function () {
     .pipe(prefix(prefixerOptions))
     .pipe(rename(bases.name + '.css'))
     .pipe(gulp.dest(bases.dist))
+    .pipe(gulp.dest(bases.demo + 'css'))
     .pipe(reload({stream:true}))
     .pipe(cleanCSS({debug: true}, function(details) {
       console.log(details.name + ': ' + details.stats.originalSize)
@@ -112,26 +113,18 @@ gulp.task('md', function(){
 })
 
 gulp.task('watch', function() {
-  gulp.watch(bases.src + 'scss/**/*.scss', ['scss', 'copy'])
+  gulp.watch(bases.src + 'scss/**/*.scss', ['scss'])
   gulp.watch(bases.demo + '*.html', ['html'])
   gulp.watch(bases.demo + '*.md', ['md'])
-})
-
-gulp.task('copy', function() {
-  // copy css to dist directly
-  gulp.src(bases.dist + '*')
-    .pipe(size({ gzip: true, showFiles: true }))
-    .pipe(gulp.dest(bases.demo + 'css'))
-    .pipe(reload({stream:true}))
 })
 
 // BUILD TASKS
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'scss', 'copy', 'watch', done)
+  runSequence('clean:dist', 'browser-sync', 'scss', 'watch', done)
 })
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'scss', 'copy', done)
+  runSequence('clean:dist', 'scss', done)
 })

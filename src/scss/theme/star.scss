@@ -1,3 +1,9 @@
 $color: #8e71c1;
 $bottom-color: #eaecef;
-@import '../markdown.scss'
+
+@import '../markdown.scss';
+
+// hr {
+//   background: radial-gradient(ellipse at center, rgba(0, 20, 80, 0.2) 0, rgba(255, 255, 255, 0) 75%);
+//   box-sizing: content-box;
+// }
