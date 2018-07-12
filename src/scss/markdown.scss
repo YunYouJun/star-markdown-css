@@ -6,7 +6,19 @@
   font-size: 1rem;
   line-height: 1.5;
   word-wrap: break-word;
-  font-weight: 400;
+  font-weight: 300;
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  &:before {
+    display: table;
+    content: "";
+  }
+  * {
+    box-sizing: border-box;
+  }
   h1,
   h2,
   h3,
@@ -62,13 +74,6 @@
     line-height: 1.6;
     letter-spacing: 0;
   }
-
-  .octicon {
-    display: inline-block;
-    vertical-align: text-top;
-    fill: currentColor;
-  }
-
   a {
     background-color: transparent;
     &:active,
@@ -76,18 +81,34 @@
       outline-width: 0;
     }
   }
-}
+  hr {
+    background-color: #e1e4e8;
+    overflow: hidden;
+    height: 0.25em;
+    border: 0;
+    border-bottom: 1px solid #dfe2e5;
+    padding: 0;
+    margin: 20px 0;
+    &:before {
+      display: table;
+      content: "";
+    }
+    &:after {
+      display: table;
+      clear: both;
+      content: "";
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #333;
+    }
+  }
 
-.markdown-body strong {
-  font-weight: inherit;
-}
+  strong {
+    font-weight: 500;
+  }
 
-.markdown-body strong {
-  font-weight: bolder;
-}
-
-.markdown-body img {
-  border-style: none;
+  img {
+    border-style: none;
+  }
 }
 
 .markdown-body code,
@@ -95,12 +116,6 @@
 .markdown-body pre {
   font-family: monospace, monospace;
   font-size: 1em;
-}
-
-.markdown-body hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
 }
 
 .markdown-body input {
@@ -117,10 +132,6 @@
   padding: 0;
 }
 
-.markdown-body * {
-  box-sizing: border-box;
-}
-
 .markdown-body input {
   font-family: inherit;
   font-size: inherit;
@@ -134,30 +145,6 @@
 
 .markdown-body a:hover {
   text-decoration: underline;
-}
-
-.markdown-body strong {
-  font-weight: 600;
-}
-
-.markdown-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #dfe2e5;
-}
-
-.markdown-body hr::before {
-  display: table;
-  content: "";
-}
-
-.markdown-body hr::after {
-  display: table;
-  clear: both;
-  content: "";
 }
 
 .markdown-body table {
@@ -214,21 +201,6 @@
   font-size: 12px;
 }
 
-.markdown-body .octicon {
-  vertical-align: text-bottom;
-}
-
-.markdown-body::before {
-  display: table;
-  content: "";
-}
-
-.markdown-body::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
 .markdown-body>*:first-child {
   margin-top: 0 !important;
 }
@@ -262,14 +234,6 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 16px;
-}
-
-.markdown-body hr {
-  height: 0.25em;
-  padding: 0;
-  margin: 24px 0;
-  background-color: #e1e4e8;
-  border: 0;
 }
 
 .markdown-body blockquote {
@@ -470,8 +434,4 @@
 .markdown-body .task-list-item input {
   margin: 0 0.2em 0.25em -1.6em;
   vertical-align: middle;
-}
-
-.markdown-body hr {
-  border-bottom-color: #eee;
 }
