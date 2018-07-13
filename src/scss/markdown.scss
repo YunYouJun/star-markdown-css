@@ -109,6 +109,21 @@
   img {
     border-style: none;
   }
+  
+  blockquote {
+    margin: 0;
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+  }
+
+  &>:first-child {
+    margin-top: 0;
+  }
+  
+  &>:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .markdown-body code,
@@ -160,10 +175,6 @@
 .markdown-body p {
   margin-top: 0;
   margin-bottom: 10px;
-}
-
-.markdown-body blockquote {
-  margin: 0;
 }
 
 .markdown-body ul,
@@ -234,20 +245,6 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 16px;
-}
-
-.markdown-body blockquote {
-  padding: 0 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
-}
-
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
-}
-
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
 }
 
 .markdown-body kbd {
