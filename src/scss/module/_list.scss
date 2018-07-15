@@ -1,0 +1,26 @@
+ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 2em;
+    ul,
+    ol {
+      margin-top: 0;
+      margin-bottom: 0;
+      ol {
+        list-style-type: lower-alpha;
+      }
+    }
+    ol {
+      list-style-type: lower-roman;
+    }
+  }
+  li {
+    word-wrap: break-all;
+  }
+  li>p {
+    margin-top: 16px;
+  }
+  li+li {
+    margin-top: 0.25em;
+  }

@@ -53,7 +53,7 @@ __This is bold text__
 
 _This is italic text_
 
-~~Strikethrough~~
+~~Strike through~~
 
 
 ## Blockquotes
