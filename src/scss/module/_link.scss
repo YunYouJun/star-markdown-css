@@ -1,0 +1,11 @@
+a {
+  color: #0366d6;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:not([href]) {
+    color: inherit;
+    text-decoration: none;
+  }
+}

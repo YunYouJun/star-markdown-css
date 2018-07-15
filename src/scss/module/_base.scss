@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  &:before {
+    display: table;
+    content: "";
+  }
+  &>:first-child {
+    margin-top: 0 !important;
+  }
+  &>:last-child {
+    margin-bottom: 0 !important;
+  }
+}

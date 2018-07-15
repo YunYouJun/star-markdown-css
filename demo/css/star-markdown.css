@@ -7,22 +7,9 @@
   line-height: 1.5;
   word-wrap: break-word;
   font-weight: 300;
-}
-
-.markdown-body:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.markdown-body:before {
-  display: table;
-  content: "";
-}
-
-.markdown-body * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  /*  base  */
+  /*  kbd */
+  /* other */
 }
 
 .markdown-body p,
@@ -34,6 +21,252 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 16px;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active, .markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  overflow: hidden;
+  height: 0.25em;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.markdown-body *:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body *:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body * > :first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body * > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  margin: 0;
+  font-size: 1em;
+  word-wrap: normal;
+}
+
+.markdown-body code {
+  padding: 0.2em 0.4em;
+  font-size: 100%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-break: normal;
+  white-space: pre;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type="checkbox"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body :checked + .radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .task-list-item + .task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ul,
+.markdown-body ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ul ol,
+.markdown-body ol ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li > p {
+  margin-top: 16px;
+}
+
+.markdown-body li + li {
+  margin-top: 0.25em;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body strong {
+  font-weight: 500;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .markdown-body h1,
@@ -116,99 +349,6 @@
   letter-spacing: 0;
 }
 
-.markdown-body a {
-  background-color: transparent;
-}
-
-.markdown-body a:active, .markdown-body a:hover {
-  outline-width: 0;
-}
-
-.markdown-body hr {
-  background-color: #e1e4e8;
-  overflow: hidden;
-  height: 0.25em;
-  border: 0;
-  border-bottom: 1px solid #dfe2e5;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.markdown-body hr:before {
-  display: table;
-  content: "";
-}
-
-.markdown-body hr:after {
-  display: table;
-  clear: both;
-  content: "";
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
-}
-
-.markdown-body strong {
-  font-weight: 500;
-}
-
-.markdown-body img {
-  border-style: none;
-}
-
-.markdown-body blockquote {
-  margin: 0;
-  padding: 0 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
-}
-
-.markdown-body > :first-child {
-  margin-top: 0;
-}
-
-.markdown-body > :last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body ul,
-.markdown-body ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 2em;
-}
-
-.markdown-body ul ul,
-.markdown-body ul ol,
-.markdown-body ol ul,
-.markdown-body ol ol {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body ul ul ol,
-.markdown-body ul ol ol,
-.markdown-body ol ul ol,
-.markdown-body ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-.markdown-body ul ol,
-.markdown-body ol ol {
-  list-style-type: lower-roman;
-}
-
-.markdown-body li {
-  word-wrap: break-all;
-}
-
-.markdown-body li > p {
-  margin-top: 16px;
-}
-
-.markdown-body li + li {
-  margin-top: 0.25em;
-}
-
 .markdown-body kbd {
   display: inline-block;
   padding: 3px 5px;
@@ -224,118 +364,8 @@
           box-shadow: inset 0 -1px 0 #c6cbd1;
 }
 
-.markdown-body code,
-.markdown-body pre {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  margin: 0;
-  font-size: 1em;
-  word-wrap: normal;
-}
-
-.markdown-body code {
-  padding: 0.2em 0.4em;
-  font-size: 100%;
-  background-color: rgba(27, 31, 35, 0.05);
-  border-radius: 3px;
-}
-
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.markdown-body pre code {
-  display: inline;
-  max-width: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-break: normal;
-  white-space: pre;
-  background-color: transparent;
-  border: 0;
-}
-
-.markdown-body .highlight {
-  margin-bottom: 16px;
-}
-
-.markdown-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.markdown-body input {
-  font: inherit;
-  margin: 0;
-}
-
-.markdown-body input {
-  overflow: visible;
-}
-
-.markdown-body [type="checkbox"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-}
-
-.markdown-body input {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.markdown-body a {
-  color: #0366d6;
-  text-decoration: none;
-}
-
-.markdown-body a:hover {
-  text-decoration: underline;
-}
-
-.markdown-body table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-.markdown-body td,
-.markdown-body th {
-  padding: 0;
-}
-
-.markdown-body p {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
 .markdown-body dd {
   margin-left: 0;
-}
-
-.markdown-body > *:first-child {
-  margin-top: 0 !important;
-}
-
-.markdown-body > *:last-child {
-  margin-bottom: 0 !important;
-}
-
-.markdown-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
 }
 
 .markdown-body .anchor {
@@ -366,31 +396,6 @@
   margin-bottom: 16px;
 }
 
-.markdown-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-}
-
-.markdown-body table th {
-  font-weight: 600;
-}
-
-.markdown-body table th,
-.markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
-}
-
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
-}
-
 .markdown-body img {
   max-width: 100%;
   -webkit-box-sizing: content-box;
@@ -409,23 +414,4 @@
 .markdown-body .full-commit .btn-outline:not(:disabled):hover {
   color: #005cc5;
   border-color: #005cc5;
-}
-
-.markdown-body :checked + .radio-label {
-  position: relative;
-  z-index: 1;
-  border-color: #0366d6;
-}
-
-.markdown-body .task-list-item {
-  list-style-type: none;
-}
-
-.markdown-body .task-list-item + .task-list-item {
-  margin-top: 3px;
-}
-
-.markdown-body .task-list-item input {
-  margin: 0 0.2em 0.25em -1.6em;
-  vertical-align: middle;
 }

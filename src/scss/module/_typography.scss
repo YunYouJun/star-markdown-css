@@ -1,0 +1,70 @@
+strong {
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  .octicon-link {
+    color: #1b1f23;
+    vertical-align: middle;
+    visibility: hidden;
+  }
+  &:hover .anchor {
+    text-decoration: none;
+  }
+  &:hover .anchor .octicon-link {
+    visibility: visible;
+  }
+}
+
+h1 {
+  font-size: 3.0rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid $bottom-color;
+}
+
+h2 {
+  font-size: 2.6rem;
+  line-height: 1.25;
+  letter-spacing: -.1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid $bottom-color;
+}
+
+h3 {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  letter-spacing: -.1rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  line-height: 1.35;
+  letter-spacing: -.08rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: -.05rem;
+}
+
+h6 {
+  font-size: 1.0rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
