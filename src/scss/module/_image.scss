@@ -1,0 +1,12 @@
+img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+  &[align=right] {
+    padding-left: 20px;
+  }
+  &[align=left] {
+    padding-right: 20px;
+  }
+}
