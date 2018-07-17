@@ -2,7 +2,7 @@
   "name": "star-markdown-css",
   "version": "0.0.1",
   "description": "Markdown Css about violet wandering planet.",
-  "main": "star-markdown.css",
+  "main": "dist/star-markdown.css",
   "repository": "https://github.com/YunYouJun/star-markdown-css.git",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",

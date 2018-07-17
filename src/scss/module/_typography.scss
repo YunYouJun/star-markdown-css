@@ -1,5 +1,5 @@
 strong {
-  font-weight: 500;
+  font-weight: $font-weight-bold;
 }
 
 p {
@@ -15,7 +15,7 @@ h5,
 h6 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: $font-weight-heading;
   .octicon-link {
     color: #1b1f23;
     vertical-align: middle;
