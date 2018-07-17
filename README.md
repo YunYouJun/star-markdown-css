@@ -2,19 +2,25 @@
 
 > Markdown Css about violet wandering planet.
 
+![npm](https://img.shields.io/npm/v/star-markdown-css.svg?style=for-the-badge)
+![npm](https://img.shields.io/npm/dt/star-markdown-css.svg?style=for-the-badge)
+![npm](https://img.shields.io/npm/l/star-markdown-css.svg?style=for-the-badge)
+![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/star-markdown-css.svg?style=for-the-badge)
+
 Base on [github-markdown-css](https://github.com/sindresorhus/github-markdown-css).
 
 ## [Demo](https://yunyoujun.github.io/star-markdown-css)
 
 ## Install
 
-- Download [manually](https://raw.githubusercontent.com/YunYouJun/star-markdown-css/master/star-markdown.css)
-- CDN: <https://cdnjs.com>
+- Download [manually](https://raw.githubusercontent.com/YunYouJun/star-markdown-css/master/dist/star-markdown.css)
+- Download [min manually](https://raw.githubusercontent.com/YunYouJun/star-markdown-css/master/dist/star-markdown.min.css)
 
 ### NPM
 
 ```sh
 npm install star-markdown-css
+# yarn add star-markdown-css
 ```
 
 ## Usage
@@ -45,3 +51,8 @@ GitHub uses `980px` width and `45px` padding, and `15px` padding for mobile.
   <p>All the things</p>
 </article>
 ```
+
+## Intend
+
+- [ ] Auto Release
+- [ ] Add KLK bold style

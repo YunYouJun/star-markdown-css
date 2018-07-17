@@ -1,17 +1,11 @@
 $color-primary: #8e71c1 !default;
 $bottom-color: #eaecef !default;
 
-.markdown-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #24292e;
-  font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  word-wrap: break-word;
-  font-weight: 300;
-  @import '../markdown.scss';
-}
+$font-weight-base: 300;
+$font-weight-bold: 600;
+$font-weight-heading: 300;
+
+@import '../markdown.scss';
 
 // hr {
 //   background: radial-gradient(ellipse at center, rgba(0, 20, 80, 0.2) 0, rgba(255, 255, 255, 0) 75%);
