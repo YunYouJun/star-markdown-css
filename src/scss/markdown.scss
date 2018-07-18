@@ -1,6 +1,23 @@
+$background: transparent !default;
+$bottom-color: #eaecef !default;
+
+$color-primary: #000000 !default;
+$color-light-primary: lighten($color-primary, 50%) !default;
+$bottom-color: $color-light-primary !default;
+
+$font-weight-base: 400 !default;
+$font-weight-bold: 600 !default;
+$font-weight-heading: 500 !default;
+
+$hr-background-color: #e1e4e8 !default;
+
+$blockquote-color: #6a737d !default;
+$blockquote-border-left-color: #dfe2e5 !default;
+
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background: $background;
   color: #24292e;
   font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   font-size: 1rem;
