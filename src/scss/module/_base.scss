@@ -39,11 +39,11 @@ a {
 }
 
 hr {
-  background-color: #e1e4e8;
+  background-color: $hr-background-color;
+  background: $hr-background;
   overflow: hidden;
   height: 0.25em;
   border: 0;
-  border-bottom: 1px solid #dfe2e5;
   padding: 0;
   margin: 20px 0;
   &:before {

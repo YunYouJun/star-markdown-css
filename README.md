@@ -13,8 +13,7 @@ Base on [github-markdown-css](https://github.com/sindresorhus/github-markdown-cs
 
 ## Install
 
-- Download [manually](https://raw.githubusercontent.com/YunYouJun/star-markdown-css/master/dist/star-markdown.css)
-- Download [min manually](https://raw.githubusercontent.com/YunYouJun/star-markdown-css/master/dist/star-markdown.min.css)
+- Download [manually](https://github.com/YunYouJun/star-markdown-css/archive/master.zip)
 
 ### NPM
 
