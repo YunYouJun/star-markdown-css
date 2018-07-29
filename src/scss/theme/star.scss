@@ -1,24 +1,24 @@
+// basic
 $background: transparent;
-
-$color-primary: #8e71c1 !default;
+// color
+$color-primary: #8e71c1;
 $color-light-primary: lighten($color-primary, 20%);
+$color-lighter-primary: lighten($color-primary, 35%);
 $bottom-color: $color-light-primary;
-
+// font
 $font-weight-base: 300;
 $font-weight-bold: 600;
 $font-weight-heading: 300;
-
+// hr
 $hr-background-color: $color-light-primary;
 $hr-background: radial-gradient(ellipse at center, $color-light-primary 0, rgba(255, 255, 255, 0) 80%);
-
-$blockquote-color: $color-primary !default;
-$blockquote-border-left-color: $color-light-primary !default;
-
+// blockquote
+$blockquote-color: $color-primary;
+$blockquote-border-left-color: $color-light-primary;
+// code
+$code-background-color: $color-lighter-primary;
+// table
+$table-td-border-color: $color-light-primary;
+$table-tr-border-color: $color-light-primary;
+$table-tr-2n-background-color: $color-lighter-primary;
 @import '../markdown.scss';
-
-// hr {
-//   background-color: transparent;
-//   border-bottom:transparent;
-//   background: radial-gradient(ellipse at center, rgba(0, 20, 80, 0.2) 0, rgba(255, 255, 255, 0) 75%);
-//   box-sizing: content-box;
-// }

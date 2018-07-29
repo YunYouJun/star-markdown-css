@@ -10,14 +10,14 @@ table {
   th,
   td {
     padding: 6px 13px;
-    border: 1px solid #dfe2e5;
+    border: 1px solid $table-td-border-color;
   }
   tr {
     background-color: #fff;
-    border-top: 1px solid #c6cbd1;
+    border-top: 1px solid $table-tr-border-color;
   }
   tr:nth-child(2n) {
-    background-color: #f6f8fa;
+    background-color: $table-tr-2n-background-color;
   }
 }
 
