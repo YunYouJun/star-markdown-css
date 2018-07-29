@@ -34,15 +34,14 @@
   margin-bottom: 0 !important;
 }
 
-.markdown-body p,
 .markdown-body blockquote,
 .markdown-body ul,
 .markdown-body ol,
 .markdown-body dl,
 .markdown-body table,
 .markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .markdown-body a {
@@ -133,16 +132,6 @@
   border-radius: 3px;
 }
 
-.markdown-body pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
@@ -151,8 +140,18 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f6f8fa;
+  background-color: #f1edf7;
   border-radius: 3px;
+}
+
+.markdown-body pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
 }
 
 .markdown-body pre code {
@@ -178,7 +177,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f6f8fa;
+  background-color: #f1edf7;
   border-radius: 3px;
 }
 
@@ -300,16 +299,16 @@
 .markdown-body table th,
 .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+  border: 1px solid #c7b8e0;
 }
 
 .markdown-body table tr {
   background-color: #fff;
-  border-top: 1px solid #c6cbd1;
+  border-top: 1px solid #c7b8e0;
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: #f1edf7;
 }
 
 .markdown-body td,
@@ -322,7 +321,7 @@
 }
 
 .markdown-body p {
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 

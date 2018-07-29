@@ -12,17 +12,16 @@ code {
   border-radius: 3px;
 }
 
-pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-
 pre {
+  &>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
   margin-top: 0;
   margin-bottom: 0;
   word-wrap: normal;
@@ -30,7 +29,7 @@ pre {
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f6f8fa;
+  background-color: $code-background-color;
   border-radius: 3px;
   code {
     display: inline;
@@ -54,7 +53,7 @@ pre {
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    background-color: #f6f8fa;
+    background-color: $code-background-color;
     border-radius: 3px;
   }
 }

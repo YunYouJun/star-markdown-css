@@ -51,7 +51,13 @@ GitHub uses `980px` width and `45px` padding, and `15px` padding for mobile.
 </article>
 ```
 
+## Theme
+
+- Star
+- Blood
+- Pure
+
 ## Intend
 
 - [ ] Auto Release
-- [ ] Add KLK bold style
+- [ ] Add KLK Style (Pure & Blood)
