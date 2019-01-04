@@ -1,0 +1,21 @@
+// basic
+$background: transparent !default;
+// color
+$color-primary: #000000 !default;
+$color-light-primary: lighten($color-primary, 50%) !default;
+$bottom-color: $color-light-primary !default;
+// font
+$font-weight-base: 400 !default;
+$font-weight-bold: 600 !default;
+$font-weight-heading: 500 !default;
+// hr
+$hr-background-color: #e1e4e8 !default;
+// blockquote
+$blockquote-color: #6a737d !default;
+$blockquote-border-left-color: #dfe2e5 !default;
+// code
+$code-background-color: #f6f8fa !default;
+// table
+$table-td-border-color: #dfe2e5 !default;
+$table-tr-border-color: #c6cbd1 !default;
+$table-tr-2n-background-color: #f6f8fa !default;

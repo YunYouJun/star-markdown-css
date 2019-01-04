@@ -11,8 +11,7 @@ let gulp        = require('gulp'),
     plumber     = require('gulp-plumber'),
     rename      = require('gulp-rename'),
     sourcemaps  = require('gulp-sourcemaps'),
-    size        = require('gulp-size'),
-    runSequence = require('run-sequence')
+    size        = require('gulp-size')
 
 let bases = {
   name: 'star-markdown',
@@ -68,22 +67,13 @@ let prefixerOptions = {
   browsers: ['last 2 versions']
 }
 
-gulp.task('browser-sync', function() {
-  browserSync({
-    server: {
-      baseDir: bases.demo
-    },
-    open: false
-  })
-})
-
-gulp.task('clean:dist', function() {
-  return gulp.src(bases.dist)
-    .pipe(vinylPaths(del))
-})
-
-gulp.task('scss', function () {
-  return gulp.src(bases.src + 'scss/theme/star.scss')
+function scss (fileName) {
+  if ( fileName.indexOf('markdown') !== -1 ) {
+    bases.name = fileName
+  } else {
+    bases.name = fileName + '-common'
+  }
+  return gulp.src(bases.src + 'scss/theme/star/' + fileName + '.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
@@ -100,6 +90,31 @@ gulp.task('scss', function () {
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(bases.dist))
+}
+
+function scssCommon () {
+  return scss('star')
+}
+
+function scssMarkdown () {
+  return scss('star-markdown')
+}
+
+gulp.task('scss', scssCommon)
+gulp.task(scssMarkdown)
+
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+      baseDir: bases.demo
+    },
+    open: false
+  })
+})
+
+gulp.task('clean:dist', function() {
+  return gulp.src(bases.dist)
+    .pipe(vinylPaths(del))
 })
 
 gulp.task('html', function(){
@@ -119,12 +134,6 @@ gulp.task('watch', function() {
 })
 
 // BUILD TASKS
-// ------------
 
-gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'scss', 'watch', done)
-})
-
-gulp.task('build', function(done) {
-  runSequence('clean:dist', 'scss', done)
-})
+exports.default = gulp.series('clean:dist', 'browser-sync', 'scss', 'watch')
+exports.build = gulp.series('clean:dist', gulp.parallel('scss', 'scssMarkdown'))
