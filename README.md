@@ -33,36 +33,60 @@ yarn add star-markdown-css
 
 ## Usage
 
-### Html
-
-Import the `star-markdown.css` file and add a `markdown-body` class to the container of your rendered Markdown and set a width for it.
+> Import the `star-markdown.css` file and add a `markdown-body` class to the container of your rendered Markdown and set a width for it.
 GitHub uses `980px` width and `45px` padding, and `15px` padding for mobile.
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="star-markdown.css">
-<style>
-.markdown-body {
-  box-sizing: border-box;
-  min-width: 200px;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 45px;
-}
+### Html
 
-@media (max-width: 767px) {
-  .markdown-body {
-    padding: 15px;
-  }
-}
-</style>
-<article class="markdown-body">
-  <h1>Unicorns</h1>
-  <p>All the things</p>
-</article>
+Just link css.
+
+```html
+<link rel="stylesheet" href="star-markdown.css">
 ```
 
-### Vue Component
+Example:
+
+In html.
+
+```html
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/star-markdown-css@0.0.1/dist/star-markdown.css">
+  <style>
+  .markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+  }
+
+  @media (max-width: 767px) {
+    .markdown-body {
+      padding: 15px;
+    }
+  }
+  </style>
+  <body>
+    <article class="markdown-body">
+      <h1>Unicorns</h1>
+      <p>All the things</p>
+    </article>
+  </body>
+</html>
+```
+
+### Vue
+
+Just import it where you need it.
+
+```js
+import 'star-markdown-css/dist/star-markdown.css'
+```
+
+Example:
+
+In a vue component.
 
 ```html
 <template>
@@ -122,14 +146,17 @@ export default {
 yarn
 # start dev
 yarn start
+# or
+# yarn dev
 # You can see in http://localhost:2333
-# Or modify port config in gulpfile.js 'browser-sync'
+# Custom port in gulpfile.js about 'browser-sync'
 ```
 
 ## Intend
 
 - [ ] Auto Release
 - [ ] Add KLK Style (Pure & Blood)
+- [ ] Use Vue Demo
 
 ## Thanks
 

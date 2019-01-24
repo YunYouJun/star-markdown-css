@@ -4,15 +4,6 @@
 
 ## Headers 标题
 
-```md
-# h1 Heading 标题
-## h2 Heading 标题
-### h3 Heading 标题
-#### h4 Heading 标题
-##### h5 Heading 标题
-###### h6 Heading 标题
-```
-
 # h1 Heading 标题
 ## h2 Heading 标题
 ### h3 Heading 标题
@@ -24,22 +15,17 @@
 
 ## Horizontal Rules 水平线
 
-```md
 Hyphens
----
-
-Asterisks
-***
-
-Underscores
-___
-```
 
 ---
 
-***
+Asterisks ***
 
-___
+---
+
+Underscores ___
+
+---
 
 ## Emphasis
 
@@ -59,19 +45,17 @@ _This is italic text 中文文本_
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
+>>> ...or with spaces between arrows.
 
 ## Lists
 
 Unordered
 
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
+- Create a list by starting a line with `+`, `-`, or `*`
+- Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
+    - you need has a unified style
+- Very easy! I am used to `-`.
 
 Ordered
 
@@ -79,8 +63,8 @@ Ordered
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
 
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
+4. You can use sequential numbers...
+5. ...or keep all the numbers as `1.`
 
 Start numbering with offset:
 
@@ -104,7 +88,10 @@ Block code "fences"
 Sample text here...
 ```
 
-Syntax highlighting
+Syntax highlighting ( This is not a function of star-markdown-css. )
+
+You can visit [highlight](https://github.com/highlightjs/highlight.js)
+ or [Prism](https://github.com/PrismJS/prism).
 
 ```js
 var foo = function (bar) {
@@ -138,7 +125,7 @@ Right aligned columns
 
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+[I'm the project address in github.][GitHub]
 
 [You can use numbers for reference-style link definitions][1]
 
@@ -146,9 +133,9 @@ Or leave it empty and use the [link text itself]
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: https://yunyoujun.cn
+[GitHub]: https://github.com/YunYouJun/star-markdown-css
+[1]: https://yunyoujun.cn
+[link text itself]: https://star-markdown-css.yunyoujun.cn
 
 ## Images
 
