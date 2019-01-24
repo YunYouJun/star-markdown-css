@@ -1,6 +1,6 @@
 let gulp        = require('gulp'),
     sass        = require('gulp-sass'),
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create(),
     reload      = browserSync.reload,
     colors      = require('colors'),
     vinylPaths  = require('vinyl-paths'),
@@ -14,7 +14,6 @@ let gulp        = require('gulp'),
     size        = require('gulp-size')
 
 let bases = {
-  name: 'star-markdown',
   src:  'src/',
   dist: 'dist/',
   demo: 'demo/',
@@ -67,53 +66,48 @@ let prefixerOptions = {
   browsers: ['last 2 versions']
 }
 
-function scss (fileName) {
-  if ( fileName.indexOf('markdown') !== -1 ) {
-    bases.name = fileName
-  } else {
-    bases.name = fileName + '-common'
-  }
-  return gulp.src(bases.src + 'scss/theme/star/' + fileName + '.scss')
+function scss (theme, type) {
+  return gulp.src(bases.src + 'scss/theme/' + theme + '/' + type + '.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(prefix(prefixerOptions))
-    .pipe(rename(bases.name + '.css'))
+    .pipe(rename(theme + '-' + type + '.css'))
     .pipe(gulp.dest(bases.dist))
     .pipe(gulp.dest(bases.demo + 'css'))
     .pipe(reload({stream:true}))
     .pipe(cleanCSS({debug: true}, function(details) {
-      console.log(details.name + ': ' + details.stats.originalSize)
-      console.log(details.name + ': ' + details.stats.minifiedSize)
+      console.log(details.name + ': ' + details.stats.originalSize + ' B')
+      console.log(details.name + ': ' + details.stats.minifiedSize + ' B')
     }))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(bases.dist))
 }
 
-function scssCommon () {
-  return scss('star')
+function scssTheme(theme) {
+  return Promise.all([scss(theme, 'common'), scss(theme, 'markdown')])
 }
 
-function scssMarkdown () {
-  return scss('star-markdown')
-}
-
-gulp.task('scss', scssCommon)
-gulp.task(scssMarkdown)
+gulp.task('scss:star', function() {
+  return scssTheme('star')
+})
 
 gulp.task('browser-sync', function() {
-  browserSync({
+  browserSync.init({
     server: {
       baseDir: bases.demo
     },
-    open: false
+    open: false,
+    port: 2333
   })
 })
 
 gulp.task('clean:dist', function() {
-  return gulp.src(bases.dist)
+  return gulp.src(bases.dist, {
+      allowEmpty: true
+    })
     .pipe(vinylPaths(del))
 })
 
@@ -128,12 +122,11 @@ gulp.task('md', function(){
 })
 
 gulp.task('watch', function() {
-  gulp.watch(bases.src + 'scss/**/*.scss', ['scss'])
-  gulp.watch(bases.demo + '*.html', ['html'])
-  gulp.watch(bases.demo + '*.md', ['md'])
+  gulp.watch(bases.src + 'scss/**/*.scss', gulp.series('scss:star'))
+  gulp.watch(bases.demo + '*.html', gulp.series('html'))
+  gulp.watch(bases.demo + '*.md', gulp.series('md'))
 })
 
 // BUILD TASKS
-
-exports.default = gulp.series('clean:dist', 'browser-sync', 'scss', 'watch')
-exports.build = gulp.series('clean:dist', gulp.parallel('scss', 'scssMarkdown'))
+exports.default = gulp.series(gulp.parallel('browser-sync', 'watch'))
+exports.build = gulp.series('clean:dist', 'scss:star')

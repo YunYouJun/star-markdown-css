@@ -1,0 +1,21 @@
+#{$bodyClass} {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: $background;
+  color: #24292e;
+  font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-weight: $font-weight-base;
+  @import './base';
+  @import './blockquote';
+  @import './code';
+  @import './form';
+  @import './image';
+  @import './link';
+  @import './list';
+  @import './table';
+  @import './typography';
+  @import './utility';
+}
