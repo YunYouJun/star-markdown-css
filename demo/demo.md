@@ -3,7 +3,7 @@
 ![Planet](planet.png)
 
 ## Headers 标题
-标题
+
 ```md
 # h1 Heading 标题
 ## h2 Heading 标题
@@ -55,13 +55,11 @@ _This is italic text 中文文本_
 
 ~~Strike through 中文文本~~
 
-
 ## Blockquotes
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
 > > > ...or with spaces between arrows.
-
 
 ## Lists
 
@@ -81,7 +79,6 @@ Ordered
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
 
-
 1. You can use sequential numbers...
 1. ...or keep all the numbers as `1.`
 
@@ -89,7 +86,6 @@ Start numbering with offset:
 
 57. foo
 1. bar
-
 
 ## Code
 
@@ -102,16 +98,15 @@ Indented code
     line 2 of code
     line 3 of code
 
-
 Block code "fences"
 
-```
+```text
 Sample text here...
 ```
 
 Syntax highlighting
 
-``` js
+```js
 var foo = function (bar) {
   return bar++;
 };
@@ -134,7 +129,6 @@ Right aligned columns
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default.    |
 | ext    | extension to be used for dest files.                                      |
-
 
 ## Links
 

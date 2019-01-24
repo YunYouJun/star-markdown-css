@@ -29,7 +29,7 @@
 </head>
 
 <body>
-  
+
   <article class="markdown-body">
     <div id="demo-content"></div>
   </article>
@@ -51,14 +51,17 @@
     }
 
     @keyframes octocat-wave {
+
       0%,
       100% {
         transform: rotate(0)
       }
+
       20%,
       60% {
         transform: rotate(-25deg)
       }
+
       40%,
       80% {
         transform: rotate(10deg)
@@ -69,6 +72,7 @@
       .github-corner:hover .octo-arm {
         animation: none
       }
+
       .github-corner .octo-arm {
         animation: octocat-wave 560ms ease-in-out
       }
@@ -80,13 +84,13 @@
   <script>
     let rendererMD = new marked.Renderer();
     rendererMD.listitem = function (text) {
-        if (text.indexOf('type="checkbox"')!==-1) {
-          return `
+      if (text.indexOf('type="checkbox"') !== -1) {
+        return `
             <li class="task-list-item">
               ${text}
             </li>`;
-        }
-        return `
+      }
+      return `
             <li>
               ${text}
             </li>`;
@@ -94,7 +98,9 @@
 
     axios.get('./demo.md')
       .then(function (response) {
-        document.getElementById('demo-content').innerHTML = marked(response.data, { renderer: rendererMD });
+        document.getElementById('demo-content').innerHTML = marked(response.data, {
+          renderer: rendererMD
+        });
       })
       .catch(function (error) {
         // handle error
