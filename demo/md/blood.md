@@ -2,6 +2,10 @@
 
 ![Blood](../img/blood.png)
 
+载入自定义字体，移动设备与部分浏览器不支持。
+
+[Image Preview 图片预览](../img/Blood-Markdown-CSS-Demo.png)
+
 ## Font
 
 ### [站酷高端黑体](http://www.zcool.com.cn/special/zcoolfonts/#lastPage)

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "站酷高端黑";
+  src: url(/src/font/站酷高端黑修订151105.ttf) format("truetype");
+}
+
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -87,8 +92,8 @@
   border: solid 1px #d1d5da;
   border-bottom-color: #c6cbd1;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 -1px 0 #c6cbd1;
-          box-shadow: inset 0 -1px 0 #c6cbd1;
+  -webkit-box-shadow: inset 0 -1px 0 #d1c6c7;
+          box-shadow: inset 0 -1px 0 #d1c6c7;
 }
 
 .markdown-body dd {
