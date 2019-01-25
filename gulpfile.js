@@ -91,16 +91,16 @@ function scss (theme, type) {
     // .pipe(rename(theme + '-' + type + '.css'))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(prefix(prefixerOptions))
-    .pipe(gulp.dest(bases.dist))
-    .pipe(reload({stream:true}))
+    .pipe(gulp.dest(bases.dist + theme + '/'))
     .pipe(cleanCSS({debug: true}, function(details) {
       console.log(details.name + ': ' + details.stats.originalSize + ' B')
       console.log(details.name + ': ' + details.stats.minifiedSize + ' B')
     }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(size({ gzip: true, showFiles: true }))
-    .pipe(gulp.dest(bases.dist))
-    .pipe(gulp.dest(bases.demo + 'css'))
+    .pipe(gulp.dest(bases.dist + theme + '/'))
+    .pipe(gulp.dest(bases.demo + 'css/'))
+    .pipe(reload({stream:true}))
 }
 
 function scssTheme(theme) {
