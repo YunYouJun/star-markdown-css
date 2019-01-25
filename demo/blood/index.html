@@ -4,13 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Star Markdown CSS Demo</title>
-  <link rel="icon" type="image/png" href="img/planet.png">
-  <link rel="stylesheet" href="/css/star-markdown.min.css">
+  <title>Blood Markdown CSS Demo</title>
+  <link rel="icon" type="image/png" href="/img/blood.png">
+  <link rel="stylesheet" href="/css/blood-markdown.min.css">
   <link rel="stylesheet" href="/css/common.css">
+  <style>
+    body{
+      background: black;
+    }
+  </style>
 </head>
 
 <body>
+
   <article class="markdown-body">
     <div id="demo-content"></div>
   </article>
@@ -26,6 +32,7 @@
         fill="currentColor" class="octo-body"></path>
     </svg>
   </a>
+
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
@@ -43,7 +50,7 @@
             </li>`;
     }
 
-    axios.get('/md/index.md')
+    axios.get('/md/blood.md')
       .then(function (response) {
         document.getElementById('demo-content').innerHTML = marked(response.data, {
           renderer: rendererMD

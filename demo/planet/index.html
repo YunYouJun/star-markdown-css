@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Star Markdown CSS Demo</title>
-  <link rel="icon" type="image/png" href="img/planet.png">
+  <title>Planet Markdown CSS Demo</title>
+  <link rel="icon" type="image/png" href="/img/planet.png">
   <link rel="stylesheet" href="/css/star-markdown.min.css">
   <link rel="stylesheet" href="/css/common.css">
 </head>
@@ -43,7 +43,7 @@
             </li>`;
     }
 
-    axios.get('/md/index.md')
+    axios.get('/md/planet.md')
       .then(function (response) {
         document.getElementById('demo-content').innerHTML = marked(response.data, {
           renderer: rendererMD

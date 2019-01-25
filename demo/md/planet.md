@@ -1,6 +1,6 @@
 # Star Markdown CSS Demo
 
-![Planet](planet.png)
+![Planet](../img/planet.png)
 
 ## Headers 标题
 
@@ -45,7 +45,7 @@ _This is italic text 中文文本_
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
->>> ...or with spaces between arrows.
+>>> ...or with spaces between arrows.  
 
 ## Lists
 

@@ -11,12 +11,21 @@ let gulp        = require('gulp'),
     plumber     = require('gulp-plumber'),
     rename      = require('gulp-rename'),
     sourcemaps  = require('gulp-sourcemaps'),
-    size        = require('gulp-size')
+    size        = require('gulp-size'),
+    concat      = require('gulp-concat')
 
 let bases = {
   src:  'src/',
+  scss: 'src/scss/',
   dist: 'dist/',
   demo: 'demo/',
+}
+
+let demo = {
+  html: '**/*.html',
+  md: 'md/*.md',
+  scss: 'scss/**/*.scss',
+  css: 'css/common.css'
 }
 
 let sassOptions = {
@@ -66,32 +75,45 @@ let prefixerOptions = {
   browsers: ['last 2 versions']
 }
 
+function fileArray(theme, type) {
+  return [
+    bases.scss + 'theme/_' + theme + '.scss', 
+    bases.scss + 'base/_' + type + '.scss'
+  ]
+}
+
 function scss (theme, type) {
-  return gulp.src(bases.src + 'scss/theme/' + theme + '/' + type + '.scss')
+  return gulp.src(fileArray(theme, type))
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
-    .pipe(sass(sassOptions))
+    .pipe(concat({ path: theme + '-' + type + '.scss' }))
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    // .pipe(rename(theme + '-' + type + '.css'))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(prefix(prefixerOptions))
-    .pipe(rename(theme + '-' + type + '.css'))
     .pipe(gulp.dest(bases.dist))
-    .pipe(gulp.dest(bases.demo + 'css'))
     .pipe(reload({stream:true}))
     .pipe(cleanCSS({debug: true}, function(details) {
       console.log(details.name + ': ' + details.stats.originalSize + ' B')
       console.log(details.name + ': ' + details.stats.minifiedSize + ' B')
     }))
-    .pipe(size({ gzip: true, showFiles: true }))
     .pipe(rename({ suffix: '.min' }))
+    .pipe(size({ gzip: true, showFiles: true }))
     .pipe(gulp.dest(bases.dist))
+    .pipe(gulp.dest(bases.demo + 'css'))
 }
 
 function scssTheme(theme) {
   return Promise.all([scss(theme, 'common'), scss(theme, 'markdown')])
+  // return scss(theme, 'common')
 }
 
 gulp.task('scss:star', function() {
   return scssTheme('star')
+})
+
+gulp.task('scss:blood', function() {
+  return scssTheme('blood')
 })
 
 gulp.task('browser-sync', function() {
@@ -111,22 +133,13 @@ gulp.task('clean:dist', function() {
     .pipe(vinylPaths(del))
 })
 
-gulp.task('html', function(){
-  return gulp.src(bases.demo + '*.html')
-    .pipe(reload({stream:true}))
-})
-
-gulp.task('md', function(){
-  return gulp.src(bases.demo + '*.md')
-    .pipe(reload({stream:true}))
-})
-
 gulp.task('watch', function() {
-  gulp.watch(bases.src + 'scss/**/*.scss', gulp.series('scss:star'))
-  gulp.watch(bases.demo + '*.html', gulp.series('html'))
-  gulp.watch(bases.demo + '*.md', gulp.series('md'))
+  gulp.watch(bases.src + demo.scss, gulp.parallel('scss:star', 'scss:blood'))
+  gulp.watch(bases.demo + demo.html).on("change", reload)
+  gulp.watch(bases.demo + demo.md).on("change", reload)
+  gulp.watch(bases.demo + demo.css).on("change", reload)
 })
 
 // BUILD TASKS
 exports.default = gulp.series(gulp.parallel('browser-sync', 'watch'))
-exports.build = gulp.series('clean:dist', 'scss:star')
+exports.build = gulp.series('clean:dist', gulp.parallel('scss:star', 'scss:blood'))

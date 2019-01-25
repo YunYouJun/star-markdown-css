@@ -1,60 +1,60 @@
-.markdown-body {
+body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background: transparent;
+  background: black;
   color: #24292e;
   font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   word-wrap: break-word;
-  font-weight: 300;
+  font-weight: 400;
 }
 
-.markdown-body::after {
+body::after {
   display: table;
   clear: both;
   content: "";
 }
 
-.markdown-body::before {
+body::before {
   display: table;
   content: "";
 }
 
-.markdown-body * {
+body * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.markdown-body * > :first-child {
+body * > :first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body * > :last-child {
+body * > :last-child {
   margin-bottom: 0 !important;
 }
 
-.markdown-body blockquote,
-.markdown-body ul,
-.markdown-body ol,
-.markdown-body dl,
-.markdown-body table,
-.markdown-body pre {
+body blockquote,
+body ul,
+body ol,
+body dl,
+body table,
+body pre {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.markdown-body a {
+body a {
   background-color: transparent;
 }
 
-.markdown-body a:active, .markdown-body a:hover {
+body a:active, body a:hover {
   outline-width: 0;
 }
 
-.markdown-body hr {
-  background-color: #c7b8e0;
-  background: radial-gradient(ellipse at center, #c7b8e0 0, rgba(255, 255, 255, 0) 80%);
+body hr {
+  background-color: #e1e4e8;
+  background: #24292e;
   overflow: hidden;
   height: 0.25em;
   border: 0;
@@ -62,12 +62,12 @@
   margin: 20px 0;
 }
 
-.markdown-body hr:before {
+body hr:before {
   display: table;
   content: "";
 }
 
-.markdown-body hr:after {
+body hr:after {
   display: table;
   clear: both;
   content: "";
@@ -75,7 +75,7 @@
   color: #333;
 }
 
-.markdown-body kbd {
+body kbd {
   display: inline-block;
   padding: 3px 5px;
   font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -90,15 +90,15 @@
           box-shadow: inset 0 -1px 0 #c6cbd1;
 }
 
-.markdown-body dd {
+body dd {
   margin-left: 0;
 }
 
-.markdown-body dl {
+body dl {
   padding: 0;
 }
 
-.markdown-body dl dt {
+body dl dt {
   padding: 0;
   margin-top: 16px;
   font-size: 1em;
@@ -106,25 +106,25 @@
   font-weight: 600;
 }
 
-.markdown-body dl dd {
+body dl dd {
   padding: 0 16px;
   margin-bottom: 16px;
 }
 
-.markdown-body blockquote {
+body blockquote {
   margin: 0;
   padding: 0 1em;
-  color: #8e71c1;
-  border-left: 0.25em solid #c7b8e0;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
 }
 
-.markdown-body code,
-.markdown-body pre {
+body code,
+body pre {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 1em;
 }
 
-.markdown-body code {
+body code {
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
@@ -132,7 +132,7 @@
   border-radius: 3px;
 }
 
-.markdown-body pre {
+body pre {
   margin-top: 0;
   margin-bottom: 0;
   word-wrap: normal;
@@ -140,11 +140,11 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f1edf7;
+  background-color: #f6f8fa;
   border-radius: 3px;
 }
 
-.markdown-body pre > code {
+body pre > code {
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -154,7 +154,7 @@
   border: 0;
 }
 
-.markdown-body pre code {
+body pre code {
   display: inline;
   max-width: auto;
   padding: 0;
@@ -166,22 +166,22 @@
   border: 0;
 }
 
-.markdown-body .highlight {
+body .highlight {
   margin-bottom: 16px;
 }
 
-.markdown-body .highlight pre {
+body .highlight pre {
   margin-bottom: 0;
   word-break: normal;
   padding: 16px;
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f1edf7;
+  background-color: #f6f8fa;
   border-radius: 3px;
 }
 
-.markdown-body img {
+body img {
   border-style: none;
   max-width: 100%;
   -webkit-box-sizing: content-box;
@@ -189,68 +189,68 @@
   background-color: #fff;
 }
 
-.markdown-body img[align=right] {
+body img[align=right] {
   padding-left: 20px;
 }
 
-.markdown-body img[align=left] {
+body img[align=left] {
   padding-right: 20px;
 }
 
-.markdown-body a {
+body a {
   color: #0366d6;
   text-decoration: none;
 }
 
-.markdown-body a:hover {
+body a:hover {
   text-decoration: underline;
 }
 
-.markdown-body a:not([href]) {
+body a:not([href]) {
   color: inherit;
   text-decoration: none;
 }
 
-.markdown-body ul,
-.markdown-body ol {
+body ul,
+body ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 2em;
 }
 
-.markdown-body ul ul,
-.markdown-body ul ol,
-.markdown-body ol ul,
-.markdown-body ol ol {
+body ul ul,
+body ul ol,
+body ol ul,
+body ol ol {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.markdown-body ul ul ol,
-.markdown-body ul ol ol,
-.markdown-body ol ul ol,
-.markdown-body ol ol ol {
+body ul ul ol,
+body ul ol ol,
+body ol ul ol,
+body ol ol ol {
   list-style-type: lower-alpha;
 }
 
-.markdown-body ul ol,
-.markdown-body ol ol {
+body ul ol,
+body ol ol {
   list-style-type: lower-roman;
 }
 
-.markdown-body li {
+body li {
   word-wrap: break-all;
 }
 
-.markdown-body li > p {
+body li > p {
   margin-top: 16px;
 }
 
-.markdown-body li + li {
+body li + li {
   margin-top: 0.25em;
 }
 
-.markdown-body input {
+body input {
   font: inherit;
   margin: 0;
   overflow: visible;
@@ -259,32 +259,32 @@
   line-height: inherit;
 }
 
-.markdown-body [type="checkbox"] {
+body [type="checkbox"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
 
-.markdown-body :checked + .radio-label {
+body :checked + .radio-label {
   position: relative;
   z-index: 1;
   border-color: #0366d6;
 }
 
-.markdown-body .task-list-item {
+body .task-list-item {
   list-style-type: none;
 }
 
-.markdown-body .task-list-item input {
+body .task-list-item input {
   margin: 0 0.2em 0.25em -1.6em;
   vertical-align: middle;
 }
 
-.markdown-body .task-list-item + .task-list-item {
+body .task-list-item + .task-list-item {
   margin-top: 3px;
 }
 
-.markdown-body table {
+body table {
   display: block;
   width: 100%;
   overflow: auto;
@@ -292,131 +292,131 @@
   border-collapse: collapse;
 }
 
-.markdown-body table th {
+body table th {
   font-weight: 600;
 }
 
-.markdown-body table th,
-.markdown-body table td {
+body table th,
+body table td {
   padding: 6px 13px;
-  border: 1px solid #c7b8e0;
+  border: 1px solid #dfe2e5;
 }
 
-.markdown-body table tr {
+body table tr {
   background-color: #fff;
-  border-top: 1px solid #c7b8e0;
+  border-top: 1px solid #c6cbd1;
 }
 
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f1edf7;
+body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
 }
 
-.markdown-body td,
-.markdown-body th {
+body td,
+body th {
   padding: 0;
 }
 
-.markdown-body strong {
+body strong {
   font-weight: 600;
 }
 
-.markdown-body p {
+body p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
-.markdown-body h1 .octicon-link,
-.markdown-body h2 .octicon-link,
-.markdown-body h3 .octicon-link,
-.markdown-body h4 .octicon-link,
-.markdown-body h5 .octicon-link,
-.markdown-body h6 .octicon-link {
+body h1 .octicon-link,
+body h2 .octicon-link,
+body h3 .octicon-link,
+body h4 .octicon-link,
+body h5 .octicon-link,
+body h6 .octicon-link {
   color: #1b1f23;
   vertical-align: middle;
   visibility: hidden;
 }
 
-.markdown-body h1:hover .anchor,
-.markdown-body h2:hover .anchor,
-.markdown-body h3:hover .anchor,
-.markdown-body h4:hover .anchor,
-.markdown-body h5:hover .anchor,
-.markdown-body h6:hover .anchor {
+body h1:hover .anchor,
+body h2:hover .anchor,
+body h3:hover .anchor,
+body h4:hover .anchor,
+body h5:hover .anchor,
+body h6:hover .anchor {
   text-decoration: none;
 }
 
-.markdown-body h1:hover .anchor .octicon-link,
-.markdown-body h2:hover .anchor .octicon-link,
-.markdown-body h3:hover .anchor .octicon-link,
-.markdown-body h4:hover .anchor .octicon-link,
-.markdown-body h5:hover .anchor .octicon-link,
-.markdown-body h6:hover .anchor .octicon-link {
+body h1:hover .anchor .octicon-link,
+body h2:hover .anchor .octicon-link,
+body h3:hover .anchor .octicon-link,
+body h4:hover .anchor .octicon-link,
+body h5:hover .anchor .octicon-link,
+body h6:hover .anchor .octicon-link {
   visibility: visible;
 }
 
-.markdown-body h1 {
+body h1 {
   font-size: 3.0rem;
   line-height: 1.2;
   letter-spacing: -.1rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid #c7b8e0;
+  border-bottom: 1px solid #eaecef;
 }
 
-.markdown-body h2 {
+body h2 {
   font-size: 2.6rem;
   line-height: 1.25;
   letter-spacing: -.1rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid #c7b8e0;
+  border-bottom: 1px solid #eaecef;
 }
 
-.markdown-body h3 {
+body h3 {
   font-size: 2.2rem;
   line-height: 1.3;
   letter-spacing: -.1rem;
 }
 
-.markdown-body h4 {
+body h4 {
   font-size: 1.8rem;
   line-height: 1.35;
   letter-spacing: -.08rem;
 }
 
-.markdown-body h5 {
+body h5 {
   font-size: 1.4rem;
   line-height: 1.5;
   letter-spacing: -.05rem;
 }
 
-.markdown-body h6 {
+body h6 {
   font-size: 1.0rem;
   line-height: 1.6;
   letter-spacing: 0;
 }
 
-.markdown-body .anchor {
+body .anchor {
   float: left;
   padding-right: 4px;
   margin-left: -20px;
   line-height: 1;
 }
 
-.markdown-body .anchor:focus {
+body .anchor:focus {
   outline: none;
 }
 
-.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+body .full-commit .btn-outline:not(:disabled):hover {
   color: #005cc5;
   border-color: #005cc5;
 }

@@ -1,13 +1,13 @@
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background: transparent;
+  background: black;
   color: #24292e;
   font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   word-wrap: break-word;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .markdown-body::after {
@@ -53,8 +53,8 @@
 }
 
 .markdown-body hr {
-  background-color: #c7b8e0;
-  background: radial-gradient(ellipse at center, #c7b8e0 0, rgba(255, 255, 255, 0) 80%);
+  background-color: #e1e4e8;
+  background: #24292e;
   overflow: hidden;
   height: 0.25em;
   border: 0;
@@ -114,8 +114,8 @@
 .markdown-body blockquote {
   margin: 0;
   padding: 0 1em;
-  color: #8e71c1;
-  border-left: 0.25em solid #c7b8e0;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
 }
 
 .markdown-body code,
@@ -140,7 +140,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f1edf7;
+  background-color: #f6f8fa;
   border-radius: 3px;
 }
 
@@ -177,7 +177,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f1edf7;
+  background-color: #f6f8fa;
   border-radius: 3px;
 }
 
@@ -299,16 +299,16 @@
 .markdown-body table th,
 .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid #c7b8e0;
+  border: 1px solid #dfe2e5;
 }
 
 .markdown-body table tr {
   background-color: #fff;
-  border-top: 1px solid #c7b8e0;
+  border-top: 1px solid #c6cbd1;
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f1edf7;
+  background-color: #f6f8fa;
 }
 
 .markdown-body td,
@@ -333,7 +333,7 @@
 .markdown-body h6 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .markdown-body h1 .octicon-link,
@@ -370,7 +370,7 @@
   line-height: 1.2;
   letter-spacing: -.1rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid #c7b8e0;
+  border-bottom: 1px solid #eaecef;
 }
 
 .markdown-body h2 {
@@ -378,7 +378,7 @@
   line-height: 1.25;
   letter-spacing: -.1rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid #c7b8e0;
+  border-bottom: 1px solid #eaecef;
 }
 
 .markdown-body h3 {
