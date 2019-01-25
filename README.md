@@ -2,22 +2,30 @@
 
 > Markdown Css about violet wandering planet.
 
-![npm](https://img.shields.io/npm/v/star-markdown-css.svg?style=for-the-badge)
+[![npm](https://img.shields.io/npm/v/star-markdown-css.svg?style=for-the-badge)](https://www.npmjs.com/package/star-markdown-css)
 ![npm](https://img.shields.io/npm/dt/star-markdown-css.svg?style=for-the-badge)
 ![npm](https://img.shields.io/npm/l/star-markdown-css.svg?style=for-the-badge)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/star-markdown-css.svg?style=for-the-badge)
+![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/star-markdown-css.svg?style=for-the-badge)
 
 ## [Demo](https://yunyoujun.github.io/star-markdown-css)
 
+## Description
+
+- `.min` mean minified.
+- `star-markdown.css` mean css with `.markdown`.
+- `star-common.css` mean css replace `.markdown` with `body`.
+
 ## Theme
 
-- [x] Star
+- [x] Star(Planet:default)
 - [ ] Blood
 - [ ] Pure
 
 ## Install
 
 - Download [manually](https://github.com/YunYouJun/star-markdown-css/archive/master.zip)
+- [unpkg](https://unpkg.com/star-markdown-css/dist/)
 
 ### NPM
 
@@ -38,20 +46,20 @@ GitHub uses `980px` width and `45px` padding, and `15px` padding for mobile.
 
 ### Html
 
-Just link css.
+Just use css with link tag.
 
 ```html
 <link rel="stylesheet" href="star-markdown.css">
 ```
 
-Example:
+#### Example
 
 In html.
 
 ```html
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/star-markdown-css@0.0.1/dist/star-markdown.css">
+  <link rel="stylesheet" href="https://unpkg.com/star-markdown-css">
   <style>
   .markdown-body {
     box-sizing: border-box;
@@ -81,10 +89,10 @@ In html.
 Just import it where you need it.
 
 ```js
-import 'star-markdown-css/dist/star-markdown.css'
+import 'star-markdown-css'
 ```
 
-Example:
+#### Example
 
 In a vue component.
 
@@ -98,7 +106,7 @@ In a vue component.
 <script>
 import VueMarkdown from 'vue-markdown'
 import axios from 'axios'
-import 'star-markdown-css/dist/star-markdown.css'
+import 'star-markdown-css'
 export default {
   name: 'MdViewer',
   components: {
@@ -141,6 +149,8 @@ export default {
 
 ## Dev
 
+### Start
+
 ```sh
 # Install Dependencies
 yarn
@@ -150,6 +160,12 @@ yarn start
 # yarn dev
 # You can see in http://localhost:2333
 # Custom port in gulpfile.js about 'browser-sync'
+```
+
+### Build
+
+```sh
+yarn build
 ```
 
 ## Intend
