@@ -4,9 +4,10 @@ $background: transparent !default;
 $color: #24292e !default;
 // color
 $color-primary: #000000 !default;
-$color-light-primary: lighten($color-primary, 50%) !default;
-$bottom-color: $color-light-primary !default;
+$color-primary-light: lighten($color-primary, 50%) !default;
+$bottom-color: $color-primary-light !default;
 // font
+$font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif !default;
 $font-weight-base: 400 !default;
 $font-weight-bold: 600 !default;
 $font-weight-heading: 500 !default;

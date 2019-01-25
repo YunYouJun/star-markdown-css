@@ -3,24 +3,25 @@ $theme-name: 'star';
 $background: transparent;
 // color
 $color-primary: #8e71c1;
-$color-light-primary: lighten($color-primary, 20%);
-$color-lighter-primary: lighten($color-primary, 35%);
-$bottom-color: $color-light-primary;
+$color-primary-light: lighten($color-primary, 20%);
+$color-primary-lighter: lighten($color-primary, 35%);
+$bottom-color: $color-primary-light;
 // font
+$font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif !default;
 $font-weight-base: 300;
 $font-weight-bold: 600;
 $font-weight-heading: 300;
 // hr
-$hr-background-color: $color-light-primary;
-$hr-background: radial-gradient(ellipse at center, $color-light-primary 0, rgba(255, 255, 255, 0) 80%);
+$hr-background-color: $color-primary-light;
+$hr-background: radial-gradient(ellipse at center, $color-primary-light 0, rgba(255, 255, 255, 0) 80%);
 // blockquote
 $blockquote-color: $color-primary;
-$blockquote-border-left-color: $color-light-primary;
+$blockquote-border-left-color: $color-primary-light;
 // code
-$code-background-color: $color-lighter-primary;
+$code-background-color: $color-primary-lighter;
 // link
 $link-color: $color-primary;
 // table
-$table-td-border-color: $color-light-primary;
-$table-tr-border-color: $color-light-primary;
-$table-tr-2n-background-color: $color-lighter-primary;
+$table-td-border-color: $color-primary-light;
+$table-tr-border-color: $color-primary-light;
+$table-tr-2n-background-color: $color-primary-lighter;

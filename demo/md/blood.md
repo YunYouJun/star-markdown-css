@@ -1,6 +1,12 @@
-# Star Markdown CSS Demo
+# Blood Markdown CSS Demo
 
 ![Blood](../img/blood.png)
+
+## Font
+
+### [站酷高端黑体](http://www.zcool.com.cn/special/zcoolfonts/#lastPage)
+
+使用范围：免费授权全社会使用（包括商用）
 
 ## Headers 标题
 
@@ -139,15 +145,9 @@ Some text to show that the reference links can follow later.
 
 ## Images
 
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Blood](../img/blood.png "blood")
 
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+![Planet](../img/planet.png)
 
 ## Emoji
 
