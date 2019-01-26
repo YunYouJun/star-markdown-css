@@ -131,10 +131,6 @@ Right aligned columns
 
 <https://github.com/YunYouJun/star-markdown-css>
 
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
 [I'm the project address in github.][GitHub]
 
 [You can use numbers for reference-style link definitions][1]

@@ -141,5 +141,5 @@ gulp.task('watch', function() {
 })
 
 // BUILD TASKS
-exports.default = gulp.series(gulp.parallel('browser-sync', 'watch'))
+exports.default = gulp.series(gulp.parallel('scss:star', 'scss:blood'), gulp.parallel('browser-sync', 'watch'))
 exports.build = gulp.series('clean:dist', gulp.parallel('scss:star', 'scss:blood'))
