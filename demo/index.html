@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="star-markdown-css demo" />
     <title>Star Markdown CSS Demo</title>
     <link rel="icon" type="image/png" href="./img/planet.png" />
+    <link rel="preload" href="./md/index.md" />
+    <link rel="preload" href="./md/demo.md" />
+    <link rel="preload" href="./index.js" />
+    <link rel="prefetch" href="./css/blood-markdown.min.css" as="style" />
+    <link rel="prefetch" href="./css/earth-markdown.min.css" as="style" />
     <link title="theme" rel="stylesheet" href="./css/planet-markdown.min.css" />
     <link rel="stylesheet" href="./index.css" />
   </head>
@@ -43,8 +49,14 @@
         ></path>
       </svg>
     </a>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./index.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+    ></script>
+    <script defer src="./index.js"></script>
   </body>
 </html>

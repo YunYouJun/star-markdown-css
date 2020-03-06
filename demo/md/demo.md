@@ -1,7 +1,7 @@
 # Markdown CSS Demo
 
-![Planet](../img/planet.png)
-![Blood](../img/blood.png)
+![Planet](./img/planet.png)
+![Blood](./img/blood.png)
 
 ## Headers 标题
 
@@ -92,7 +92,7 @@ Indented code
 
 Block code "fences"
 
-```text
+```txt
 Sample text here...
 ```
 

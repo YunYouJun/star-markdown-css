@@ -19,7 +19,7 @@ rendererMD.listitem = function(text) {
 };
 
 axios
-  .get("/md/index.md")
+  .get("./md/index.md")
   .then(function(response) {
     document.getElementById("prompt").innerHTML = marked(response.data, {
       renderer: rendererMD
@@ -30,7 +30,7 @@ axios
     console.log(error);
   });
 axios
-  .get("/md/demo.md")
+  .get("./md/demo.md")
   .then(function(response) {
     document.getElementById("demo").innerHTML = marked(response.data, {
       renderer: rendererMD

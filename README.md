@@ -2,18 +2,14 @@
 
 > Markdown Css about starry.
 
-[![npm](https://img.shields.io/npm/v/star-markdown-css.svg?style=for-the-badge)](https://www.npmjs.com/package/star-markdown-css)
-![npm](https://img.shields.io/npm/dt/star-markdown-css.svg?style=for-the-badge)
-![npm](https://img.shields.io/npm/l/star-markdown-css.svg?style=for-the-badge)
-![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/star-markdown-css.svg?style=for-the-badge)
-![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/star-markdown-css.svg?style=for-the-badge)
+![Demo](https://github.com/YunYouJun/star-markdown-css/workflows/Demo/badge.svg)
+[![npm](https://img.shields.io/npm/v/star-markdown-css.svg)](https://www.npmjs.com/package/star-markdown-css)
+![npm](https://img.shields.io/npm/dt/star-markdown-css.svg)
+![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/star-markdown-css.svg)
+![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/star-markdown-css.svg)
+[![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/star-markdown-css)](https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css)
 
-## [Demo](https://yunyoujun.github.io/star-markdown-css)
-
-## Description
-
-- `.min` mean minified.
-- `star-markdown.css` mean css with `.markdown-body`.
+- [Demo](https://yunyoujun.github.io/star-markdown-css)
 
 ## Theme
 
@@ -21,10 +17,16 @@
 - [ ] Blood
 - [ ] Pure
 
-## Install
+## Install By
+
+### Download
 
 - Download [manually](https://github.com/YunYouJun/star-markdown-css/archive/master.zip)
-- [unpkg](https://unpkg.com/star-markdown-css/dist/)
+
+### CDN
+
+- JSDELIVR: <https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css>
+- unpkg: <https://unpkg.com/star-markdown-css/dist/planet/planet-markdown.min.css>
 
 ### NPM
 
@@ -40,7 +42,7 @@ yarn add star-markdown-css
 
 ## Usage
 
-> Import the `star-markdown.css` file and add a `markdown-body` class to the container of your rendered Markdown and set a width for it.
+> Import the `star-markdown.css` file and add a `markdown-body` class to the container of your rendered Markdown and set a width for it.  
 > GitHub uses `980px` width and `45px` padding, and `15px` padding for mobile.
 
 ### Html
@@ -48,17 +50,23 @@ yarn add star-markdown-css
 Just use css with link tag.
 
 ```html
-<link rel="stylesheet" href="star-markdown.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css"
+/>
 ```
 
-#### Example
+#### Example In HTML
 
 In html.
 
 ```html
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://unpkg.com/star-markdown-css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css"
+  />
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -91,7 +99,7 @@ Just import it where you need it.
 import "star-markdown-css";
 ```
 
-#### Example
+#### Example In Vue
 
 In a vue component.
 
@@ -152,9 +160,7 @@ In a vue component.
 # Install Dependencies
 yarn
 # start dev
-yarn start
-# or
-# yarn dev
+yarn dev
 # You can see in http://localhost:2333
 # Custom port in gulpfile.js about 'browser-sync'
 ```
@@ -167,14 +173,9 @@ yarn build
 
 ## Intend
 
-- [ ] Auto Release
 - [ ] Add KLK Style (Pure & Blood)
 - [ ] Use Vue Demo
 
 ## Thanks
 
 - [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
-
-## Change Log
-
-- 2019.01.04 Update to gulp 4.0.0

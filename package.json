@@ -26,9 +26,7 @@
   "scripts": {
     "build": "gulp build",
     "dev": "yarn start",
-    "start": "gulp",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d demo"
+    "start": "gulp"
   },
   "devDependencies": {
     "browser-sync": "^2.24.5",
