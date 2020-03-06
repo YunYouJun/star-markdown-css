@@ -1,13 +1,7 @@
-# Blood Markdown CSS Demo
+# Markdown CSS Demo
 
+![Planet](../img/planet.png)
 ![Blood](../img/blood.png)
-
-## Font
-
-```css
-font-family: Noto Serif SC, serif;
-font-weight: 900;
-```
 
 ## Headers 标题
 
@@ -149,9 +143,15 @@ Some text to show that the reference links can follow later.
 
 ## Images
 
-![Blood](../img/blood.png "blood")
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
-![Planet](../img/planet.png)
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a reference later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
 
 ## Emoji
 

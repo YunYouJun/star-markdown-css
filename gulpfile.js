@@ -3,18 +3,16 @@ let gulp = require("gulp"),
   browserSync = require("browser-sync").create(),
   reload = browserSync.reload,
   colors = require("colors"),
-  vinylPaths = require("vinyl-paths"),
   del = require("del"),
-  prefix = require("gulp-autoprefixer"),
+  autoprefixer = require("gulp-autoprefixer"),
   cleanCSS = require("gulp-clean-css"),
   notify = require("gulp-notify"),
   plumber = require("gulp-plumber"),
   rename = require("gulp-rename"),
-  sourcemaps = require("gulp-sourcemaps"),
   size = require("gulp-size"),
   concat = require("gulp-concat");
 
-const themes = ["planet", "blood"];
+const themes = ["planet", "blood", "earth"];
 
 const bases = {
   src: "src/",
@@ -57,10 +55,6 @@ let onError = function(err) {
   this.emit("end");
 };
 
-let prefixerOptions = {
-  browsers: ["last 2 versions"]
-};
-
 function fileArray(theme) {
   return [
     bases.scss + "theme/_" + theme + ".scss",
@@ -72,11 +66,10 @@ function scss(theme) {
   return gulp
     .src(fileArray(theme))
     .pipe(plumber({ errorHandler: onError }))
-    .pipe(sourcemaps.init())
     .pipe(concat({ path: theme + "-markdown" + ".scss" }))
     .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(size({ gzip: true, showFiles: true }))
-    .pipe(prefix(prefixerOptions))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(bases.dist + theme + "/"))
     .pipe(
       cleanCSS({ debug: true }, function(details) {

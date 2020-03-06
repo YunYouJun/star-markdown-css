@@ -1,17 +1,17 @@
 :root {
-  --theme-bgcolor: #141516;
+  --theme-bgcolor: transparent;
 }
 
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background: #141516;
-  color: #d81e06;
-  font-family: Noto Serif SC, serif;
+  background: transparent;
+  color: #24292e;
+  font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   overflow-wrap: break-word;
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .markdown-body::after {
@@ -57,7 +57,7 @@
 
 .markdown-body hr {
   background-color: #e1e4e8;
-  background: #d81e06;
+  background: #24292e;
   overflow: hidden;
   height: 0.2rem;
   border: 0;
@@ -116,8 +116,8 @@
 .markdown-body blockquote {
   margin: 0;
   padding: 0 1em;
-  color: #be0000;
-  border-left: 0.25em solid #ff2525;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
 }
 
 .markdown-body code,
@@ -206,7 +206,7 @@
 }
 
 .markdown-body a {
-  color: #ff7272;
+  color: #0366d6;
   text-decoration: none;
 }
 
@@ -324,7 +324,7 @@
 }
 
 .markdown-body strong {
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .markdown-body p {
@@ -340,7 +340,7 @@
 .markdown-body h6 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .markdown-body h1 .octicon-link,
@@ -377,7 +377,7 @@
   line-height: 1.2;
   letter-spacing: -0.1rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid #d81e06;
+  border-bottom: 1px solid white;
 }
 
 .markdown-body h2 {
@@ -385,7 +385,7 @@
   line-height: 1.25;
   letter-spacing: -0.1rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid #d81e06;
+  border-bottom: 1px solid white;
 }
 
 .markdown-body h3 {
