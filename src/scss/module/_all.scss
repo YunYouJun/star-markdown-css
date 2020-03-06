@@ -6,16 +6,16 @@
   font-family: $font-family;
   font-size: 1rem;
   line-height: 1.5;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   font-weight: $font-weight-base;
-  @import './base';
-  @import './blockquote';
-  @import './code';
-  @import './form';
-  @import './image';
-  @import './link';
-  @import './list';
-  @import './table';
-  @import './typography';
-  @import './utility';
+  @import "./base";
+  @import "./blockquote";
+  @import "./code";
+  @import "./form";
+  @import "./image";
+  @import "./link";
+  @import "./list";
+  @import "./table";
+  @import "./typography";
+  @import "./utility";
 }

@@ -1,4 +1,4 @@
-$theme-name: 'star';
+$theme-name: "planet";
 // basic
 $background: transparent;
 // color
@@ -12,8 +12,13 @@ $font-weight-base: 300;
 $font-weight-bold: 600;
 $font-weight-heading: 300;
 // hr
+$hr-height: 0.1rem;
 $hr-background-color: $color-primary-light;
-$hr-background: radial-gradient(ellipse at center, $color-primary-light 0, rgba(255, 255, 255, 0) 80%);
+$hr-background: radial-gradient(
+  ellipse at center,
+  $color-primary-light 0,
+  rgba(255, 255, 255, 0) 100%
+);
 // blockquote
 $blockquote-color: $color-primary;
 $blockquote-border-left-color: $color-primary-light;
@@ -24,4 +29,4 @@ $link-color: $color-primary;
 // table
 $table-td-border-color: $color-primary-light;
 $table-tr-border-color: $color-primary-light;
-$table-tr-2n-background-color: $color-primary-lighter;
+$table-tr-2n-background-color: rgba($color-primary, 0.08);

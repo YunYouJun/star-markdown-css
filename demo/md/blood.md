@@ -2,23 +2,25 @@
 
 ![Blood](../img/blood.png)
 
-载入自定义字体，移动设备与部分浏览器不支持。
-
-[Image Preview 图片预览](../img/Blood-Markdown-CSS-Demo.png)
-
 ## Font
 
-### [站酷高端黑体](http://www.zcool.com.cn/special/zcoolfonts/#lastPage)
-
-使用范围：免费授权全社会使用（包括商用）
+```css
+font-family: Noto Serif SC, serif;
+font-weight: 900;
+```
 
 ## Headers 标题
 
 # h1 Heading 标题
+
 ## h2 Heading 标题
+
 ### h3 Heading 标题
+
 #### h4 Heading 标题
+
 ##### h5 Heading 标题
+
 ###### h6 Heading 标题
 
 ---
@@ -29,11 +31,11 @@ Hyphens
 
 ---
 
-Asterisks ***
+Asterisks \*\*\*
 
 ---
 
-Underscores ___
+Underscores \_\_\_
 
 ---
 
@@ -43,9 +45,9 @@ Simple Text 中文文本
 
 **This is bold text 中文文本**
 
-__This is bold text 中文文本__
+**This is bold text 中文文本**
 
-*This is italic text 中文文本*
+_This is italic text 中文文本_
 
 _This is italic text 中文文本_
 
@@ -54,8 +56,10 @@ _This is italic text 中文文本_
 ## Blockquotes
 
 > Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
->>> ...or with spaces between arrows.  
+>
+> > ...by using additional greater-than signs right next to each other...
+> >
+> > > ...or with spaces between arrows.
 
 ## Lists
 
@@ -101,10 +105,10 @@ Sample text here...
 Syntax highlighting ( This is not a function of star-markdown-css. )
 
 You can visit [highlight](https://github.com/highlightjs/highlight.js)
- or [Prism](https://github.com/PrismJS/prism).
+or [Prism](https://github.com/PrismJS/prism).
 
 ```js
-var foo = function (bar) {
+var foo = function(bar) {
   return bar++;
 };
 
@@ -121,17 +125,17 @@ console.log(foo(5));
 
 Right aligned columns
 
-| Option | Description                                                               |
+| Option |                                                               Description |
 | -----: | ------------------------------------------------------------------------: |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
+|   data | path to data files to supply the data that will be passed into templates. |
+| engine |    engine to be used for processing templates. Handlebars is the default. |
+|    ext |                                      extension to be used for dest files. |
 
 ## Links
 
 <https://github.com/YunYouJun/star-markdown-css>
 
-[I'm the project address in github.][GitHub]
+[I'm the project address in github.][github]
 
 [You can use numbers for reference-style link definitions][1]
 
@@ -139,7 +143,7 @@ Or leave it empty and use the [link text itself]
 
 Some text to show that the reference links can follow later.
 
-[GitHub]: https://github.com/YunYouJun/star-markdown-css
+[github]: https://github.com/YunYouJun/star-markdown-css
 [1]: https://yunyoujun.cn
 [link text itself]: https://star-markdown-css.yunyoujun.cn
 

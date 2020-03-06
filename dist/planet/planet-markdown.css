@@ -6,7 +6,7 @@
   font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   font-weight: 300;
 }
 
@@ -54,9 +54,9 @@
 
 .markdown-body hr {
   background-color: #c7b8e0;
-  background: radial-gradient(ellipse at center, #c7b8e0 0, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, #c7b8e0 0, rgba(255, 255, 255, 0) 100%);
   overflow: hidden;
-  height: 0.25em;
+  height: 0.1rem;
   border: 0;
   padding: 0;
   margin: 20px 0;
@@ -135,7 +135,7 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  word-wrap: normal;
+  overflow-wrap: normal;
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -183,16 +183,26 @@
 
 .markdown-body img {
   border-style: none;
-  max-width: 100%;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  max-width: 100%;
+  max-height: 800px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.markdown-body img[align=right] {
+.markdown-body img:hover {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.markdown-body img[align="right"] {
   padding-left: 20px;
 }
 
-.markdown-body img[align=left] {
+.markdown-body img[align="left"] {
   padding-right: 20px;
 }
 
@@ -238,7 +248,7 @@
 }
 
 .markdown-body li {
-  word-wrap: break-all;
+  overflow-wrap: break-all;
 }
 
 .markdown-body li > p {
@@ -307,7 +317,7 @@
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f1edf7;
+  background-color: rgba(142, 113, 193, 0.08);
 }
 
 .markdown-body td,

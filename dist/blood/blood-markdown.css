@@ -1,19 +1,13 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "站酷高端黑";
-  src: url(/src/font/站酷高端黑修订151105.ttf) format("truetype");
-}
-
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #020202;
   color: #d81e06;
-  font-family: "站酷高端黑", "思源黑体", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-family: Noto Serif SC, serif;
   font-size: 1rem;
   line-height: 1.5;
-  word-wrap: break-word;
-  font-weight: normal;
+  overflow-wrap: break-word;
+  font-weight: 900;
 }
 
 .markdown-body::after {
@@ -62,7 +56,7 @@
   background-color: #e1e4e8;
   background: #d81e06;
   overflow: hidden;
-  height: 0.25em;
+  height: 0.2rem;
   border: 0;
   padding: 0;
   margin: 20px 0;
@@ -141,7 +135,7 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  word-wrap: normal;
+  overflow-wrap: normal;
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -189,16 +183,26 @@
 
 .markdown-body img {
   border-style: none;
-  max-width: 100%;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  max-width: 100%;
+  max-height: 800px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.markdown-body img[align=right] {
+.markdown-body img:hover {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.markdown-body img[align="right"] {
   padding-left: 20px;
 }
 
-.markdown-body img[align=left] {
+.markdown-body img[align="left"] {
   padding-right: 20px;
 }
 
@@ -244,7 +248,7 @@
 }
 
 .markdown-body li {
-  word-wrap: break-all;
+  overflow-wrap: break-all;
 }
 
 .markdown-body li > p {
@@ -322,7 +326,7 @@
 }
 
 .markdown-body strong {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .markdown-body p {
@@ -338,7 +342,7 @@
 .markdown-body h6 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .markdown-body h1 .octicon-link,

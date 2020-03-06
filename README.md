@@ -1,6 +1,6 @@
 # star-markdown-css
 
-> Markdown Css about violet wandering planet.
+> Markdown Css about starry.
 
 [![npm](https://img.shields.io/npm/v/star-markdown-css.svg?style=for-the-badge)](https://www.npmjs.com/package/star-markdown-css)
 ![npm](https://img.shields.io/npm/dt/star-markdown-css.svg?style=for-the-badge)
@@ -13,12 +13,11 @@
 ## Description
 
 - `.min` mean minified.
-- `star-markdown.css` mean css with `.markdown`.
-- `star-common.css` mean css replace `.markdown` with `body`.
+- `star-markdown.css` mean css with `.markdown-body`.
 
 ## Theme
 
-- [x] Star(Planet:default)
+- [x] Planst(defaiult): violet wandering planet
 - [ ] Blood
 - [ ] Pure
 
@@ -42,14 +41,14 @@ yarn add star-markdown-css
 ## Usage
 
 > Import the `star-markdown.css` file and add a `markdown-body` class to the container of your rendered Markdown and set a width for it.
-GitHub uses `980px` width and `45px` padding, and `15px` padding for mobile.
+> GitHub uses `980px` width and `45px` padding, and `15px` padding for mobile.
 
 ### Html
 
 Just use css with link tag.
 
 ```html
-<link rel="stylesheet" href="star-markdown.css">
+<link rel="stylesheet" href="star-markdown.css" />
 ```
 
 #### Example
@@ -58,22 +57,22 @@ In html.
 
 ```html
 <html>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/star-markdown-css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/star-markdown-css" />
   <style>
-  .markdown-body {
-    box-sizing: border-box;
-    min-width: 200px;
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 45px;
-  }
-
-  @media (max-width: 767px) {
     .markdown-body {
-      padding: 15px;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
     }
-  }
+
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
   </style>
   <body>
     <article class="markdown-body">
@@ -89,7 +88,7 @@ In html.
 Just import it where you need it.
 
 ```js
-import 'star-markdown-css'
+import "star-markdown-css";
 ```
 
 #### Example
@@ -98,52 +97,50 @@ In a vue component.
 
 ```html
 <template>
-  <vue-markdown
-    :source="mdText"
-    class="markdown-body"/>
+  <vue-markdown :source="mdText" class="markdown-body" />
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
-import axios from 'axios'
-import 'star-markdown-css'
-export default {
-  name: 'MdViewer',
-  components: {
-    VueMarkdown
-  },
-  props: {
-    src: {
-      type: String,
-      default: ''
+  import VueMarkdown from "vue-markdown";
+  import axios from "axios";
+  import "star-markdown-css";
+  export default {
+    name: "MdViewer",
+    components: {
+      VueMarkdown
+    },
+    props: {
+      src: {
+        type: String,
+        default: ""
+      }
+    },
+    data: function() {
+      return {
+        mdText: ""
+      };
+    },
+    created() {
+      axios.get(this.src).then(res => {
+        this.mdText = res.data;
+      });
     }
-  },
-  data: function() {
-    return {
-      mdText: ''
-    }
-  },
-  created() {
-    axios.get(this.src).then(res => {
-      this.mdText = res.data
-    })
-  }
-}
+  };
 </script>
 
 <style>
-.markdown-body {
-  box-sizing: border-box;
-  min-width: 200px;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0px 20px;
-}
-@media (max-width: 767px) {
   .markdown-body {
-    padding: 15px;
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0px 20px;
   }
-}
+  @media (max-width: 767px) {
+    .markdown-body {
+      padding: 15px;
+    }
+  }
 </style>
 ```
 

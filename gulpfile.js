@@ -1,145 +1,133 @@
-let gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    browserSync = require('browser-sync').create(),
-    reload      = browserSync.reload,
-    colors      = require('colors'),
-    vinylPaths  = require('vinyl-paths'),
-    del         = require('del'),
-    prefix      = require('gulp-autoprefixer'),
-    cleanCSS    = require('gulp-clean-css'),
-    notify      = require('gulp-notify'),
-    plumber     = require('gulp-plumber'),
-    rename      = require('gulp-rename'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    size        = require('gulp-size'),
-    concat      = require('gulp-concat')
+let gulp = require("gulp"),
+  sass = require("gulp-sass"),
+  browserSync = require("browser-sync").create(),
+  reload = browserSync.reload,
+  colors = require("colors"),
+  vinylPaths = require("vinyl-paths"),
+  del = require("del"),
+  prefix = require("gulp-autoprefixer"),
+  cleanCSS = require("gulp-clean-css"),
+  notify = require("gulp-notify"),
+  plumber = require("gulp-plumber"),
+  rename = require("gulp-rename"),
+  sourcemaps = require("gulp-sourcemaps"),
+  size = require("gulp-size"),
+  concat = require("gulp-concat");
 
-let bases = {
-  src:  'src/',
-  scss: 'src/scss/',
-  dist: 'dist/',
-  demo: 'demo/',
-}
+const themes = ["planet", "blood"];
 
-let demo = {
-  html: '**/*.html',
-  md: 'md/*.md',
-  scss: 'scss/**/*.scss',
-  css: 'css/common.css'
-}
+const bases = {
+  src: "src/",
+  scss: "src/scss/",
+  dist: "dist/",
+  demo: "demo/"
+};
 
-let sassOptions = {
-  outputStyle: 'expanded'
-}
+const demo = {
+  html: "**/*.html",
+  md: "md/*.md",
+  scss: "scss/**/*.scss",
+  css: "css/common.css"
+};
+
+const sassOptions = {
+  outputStyle: "expanded"
+};
 
 colors.setTheme({
-  silly:   'rainbow',
-  input:   'grey',
-  verbose: 'cyan',
-  prompt:  'grey',
-  info:    'green',
-  data:    'grey',
-  help:    'cyan',
-  warn:    'yellow',
-  debug:   'blue',
-  error:   'red'
-})
-
-let displayError = function(error) {
-  // Initial building up of the error
-  let errorString = '[' + error.plugin.error.bold + ']'
-  errorString += ' ' + error.message.replace("\n",'') // Removes new line at the end
-
-  // If the error contains the filename or line number add it to the string
-  if(error.fileName)
-      errorString += ' in ' + error.fileName
-  if(error.lineNumber)
-      errorString += ' on line ' + error.lineNumber.bold
-
-  // This will output an error like the following:
-  // [gulp-sass] error message in file_name on line 1
-  console.error(errorString)
-}
+  silly: "rainbow",
+  input: "grey",
+  verbose: "cyan",
+  prompt: "grey",
+  info: "green",
+  data: "grey",
+  help: "cyan",
+  warn: "yellow",
+  debug: "blue",
+  error: "red"
+});
 
 let onError = function(err) {
   notify.onError({
-    title:    "Gulp",
+    title: "Gulp",
     subtitle: "Failure!",
-    message:  "Error: <%= error.message %>",
-    sound:    "Basso"
-  })(err)
-  this.emit('end')
-}
+    message: "Error: <%= error.message %>",
+    sound: "Basso"
+  })(err);
+  this.emit("end");
+};
 
 let prefixerOptions = {
-  browsers: ['last 2 versions']
-}
+  browsers: ["last 2 versions"]
+};
 
-function fileArray(theme, type) {
+function fileArray(theme) {
   return [
-    bases.scss + 'theme/_' + theme + '.scss', 
-    bases.scss + 'base/_' + type + '.scss'
-  ]
+    bases.scss + "theme/_" + theme + ".scss",
+    bases.scss + "base/_" + "markdown" + ".scss"
+  ];
 }
 
-function scss (theme, type) {
-  return gulp.src(fileArray(theme, type))
-    .pipe(plumber({errorHandler: onError}))
+function scss(theme) {
+  return gulp
+    .src(fileArray(theme))
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(sourcemaps.init())
-    .pipe(concat({ path: theme + '-' + type + '.scss' }))
-    .pipe(sass(sassOptions).on('error', sass.logError))
-    // .pipe(rename(theme + '-' + type + '.css'))
+    .pipe(concat({ path: theme + "-markdown" + ".scss" }))
+    .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(prefix(prefixerOptions))
-    .pipe(gulp.dest(bases.dist + theme + '/'))
-    .pipe(cleanCSS({debug: true}, function(details) {
-      console.log(details.name + ': ' + details.stats.originalSize + ' B')
-      console.log(details.name + ': ' + details.stats.minifiedSize + ' B')
-    }))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(bases.dist + theme + "/"))
+    .pipe(
+      cleanCSS({ debug: true }, function(details) {
+        console.log(details.name + ": " + details.stats.originalSize + " B");
+        console.log(details.name + ": " + details.stats.minifiedSize + " B");
+      })
+    )
+    .pipe(rename({ suffix: ".min" }))
     .pipe(size({ gzip: true, showFiles: true }))
-    .pipe(gulp.dest(bases.dist + theme + '/'))
-    .pipe(gulp.dest(bases.demo + 'css/'))
-    .pipe(reload({stream:true}))
+    .pipe(gulp.dest(bases.dist + theme + "/"))
+    .pipe(gulp.dest(bases.demo + "css/"))
+    .pipe(reload({ stream: true }));
 }
 
-function scssTheme(theme) {
-  return Promise.all([scss(theme, 'common'), scss(theme, 'markdown')])
-  // return scss(theme, 'common')
+// all scss task
+function scssAll() {
+  return Promise.all(
+    themes.map(theme => {
+      return scss(theme);
+    })
+  );
 }
 
-gulp.task('scss:star', function() {
-  return scssTheme('star')
-})
+function clean() {
+  return del(["dist"]);
+}
 
-gulp.task('scss:blood', function() {
-  return scssTheme('blood')
-})
-
-gulp.task('browser-sync', function() {
+function watch() {
   browserSync.init({
     server: {
       baseDir: bases.demo
     },
     open: false,
     port: 2333
-  })
-})
+  });
+  gulp.watch(bases.src + demo.scss, scssAll);
+  gulp
+    .watch([
+      bases.demo + demo.html,
+      bases.demo + demo.md,
+      bases.demo + demo.css
+    ])
+    .on("change", reload);
+}
 
-gulp.task('clean:dist', function() {
-  return gulp.src(bases.dist, {
-      allowEmpty: true
-    })
-    .pipe(vinylPaths(del))
-})
+function build() {
+  clean();
+  return scssAll();
+}
 
-gulp.task('watch', function() {
-  gulp.watch(bases.src + demo.scss, gulp.parallel('scss:star', 'scss:blood'))
-  gulp.watch(bases.demo + demo.html).on("change", reload)
-  gulp.watch(bases.demo + demo.md).on("change", reload)
-  gulp.watch(bases.demo + demo.css).on("change", reload)
-})
-
-// BUILD TASKS
-exports.default = gulp.series(gulp.parallel('scss:star', 'scss:blood'), gulp.parallel('browser-sync', 'watch'))
-exports.build = gulp.series('clean:dist', gulp.parallel('scss:star', 'scss:blood'))
+exports.clean = clean;
+exports.watch = watch;
+exports.build = build;
+exports.default = gulp.series(build, watch);

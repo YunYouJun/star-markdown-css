@@ -17,11 +17,11 @@ ol {
 }
 
 li {
-  word-wrap: break-all;
-  &>p {
+  overflow-wrap: break-all;
+  & > p {
     margin-top: 16px;
   }
-  &+li {
+  & + li {
     margin-top: 0.25em;
   }
 }
@@ -40,7 +40,7 @@ input {
   padding: 0;
 }
 
-:checked+.radio-label {
+:checked + .radio-label {
   position: relative;
   z-index: 1;
   border-color: #0366d6;
@@ -52,7 +52,7 @@ input {
     margin: 0 0.2em 0.25em -1.6em;
     vertical-align: middle;
   }
-  +.task-list-item {
+  + .task-list-item {
     margin-top: 3px;
   }
 }
