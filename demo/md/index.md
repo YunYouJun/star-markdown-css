@@ -1,4 +1,4 @@
-# Markdown CSS Demo
+# Intro
 
 The project name is star-markdown-css.
 
@@ -8,5 +8,6 @@ Also, we can use other theme.
 
 ## Preview
 
-- [planet-markdown-css](/planet)
-- [blood-markdown-css](/blood) (dev...)
+- [planet-markdown-css](#planet)
+- [blood-markdown-css](#blood) (dev...)
+- [earth-markdown-css](#earth) (dev...)
