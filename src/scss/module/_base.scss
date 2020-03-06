@@ -11,10 +11,10 @@
 
 * {
   box-sizing: border-box;
-  &>:first-child {
+  & > :first-child {
     margin-top: 0 !important;
   }
-  &>:last-child {
+  & > :last-child {
     margin-bottom: 0 !important;
   }
 }
@@ -41,7 +41,7 @@ hr {
   background-color: $hr-background-color;
   background: $hr-background;
   overflow: hidden;
-  height: 0.25em;
+  height: $hr-height;
   border: 0;
   padding: 0;
   margin: 20px 0;
@@ -61,7 +61,8 @@ hr {
 kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
   line-height: 10px;
   color: #444d56;
   vertical-align: middle;

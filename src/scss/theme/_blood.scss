@@ -1,4 +1,4 @@
-$theme-name: 'blood';
+$theme-name: "blood";
 // basic
 $background: #020202;
 $color: #d81e06;
@@ -8,14 +8,10 @@ $color-primary-light: lighten($color-primary, 20%);
 $color-primary-lighter: lighten($color-primary, 35%);
 $bottom-color: $color;
 // font
-@font-face {
-  font-family: "站酷高端黑";
-  src: url(/src/font/站酷高端黑修订151105.ttf) format("truetype");
-}
-$font-family: "站酷高端黑", "思源黑体", "PingFang SC", "Microsoft YaHei", Arial, sans-serif !default;
-$font-weight-base: normal !default;
-$font-weight-bold: bold !default;
-$font-weight-heading: bold !default;
+$font-family: Noto Serif SC, serif !default;
+$font-weight-base: 900 !default;
+$font-weight-bold: normal !default;
+$font-weight-heading: 900 !default;
 // blockquote
 $blockquote-color: $color-primary;
 $blockquote-border-left-color: $color-primary-light;
