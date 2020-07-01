@@ -1,3 +1,6 @@
+dist
+demo/css
+
 .DS_Store
 node_modules
 *.log

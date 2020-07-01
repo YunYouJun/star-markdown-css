@@ -10,6 +10,8 @@ Also, we can use other theme.
 
 You can click link to preview css effect. (Just need wait a few seconds.)
 
+- [github-markdown-css](#github)
+- [yun-markdown-css](#yun)
 - [planet-markdown-css](#planet)
 - [blood-markdown-css](#blood) (dev...)
 - [earth-markdown-css](#earth) (dev...)

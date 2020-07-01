@@ -1,4 +1,4 @@
-let gulp = require("gulp"),
+const gulp = require("gulp"),
   sass = require("gulp-sass"),
   browserSync = require("browser-sync").create(),
   reload = browserSync.reload,
@@ -12,24 +12,24 @@ let gulp = require("gulp"),
   size = require("gulp-size"),
   concat = require("gulp-concat");
 
-const themes = ["planet", "blood", "earth"];
+const themes = ["yun", "planet", "blood", "earth"];
 
 const bases = {
   src: "src/",
   scss: "src/scss/",
   dist: "dist/",
-  demo: "demo/"
+  demo: "demo/",
 };
 
 const demo = {
   html: "**/*.html",
   md: "md/*.md",
   scss: "scss/**/*.scss",
-  css: "css/common.css"
+  css: "css/common.css",
 };
 
 const sassOptions = {
-  outputStyle: "expanded"
+  outputStyle: "expanded",
 };
 
 colors.setTheme({
@@ -42,15 +42,15 @@ colors.setTheme({
   help: "cyan",
   warn: "yellow",
   debug: "blue",
-  error: "red"
+  error: "red",
 });
 
-let onError = function(err) {
+let onError = function (err) {
   notify.onError({
     title: "Gulp",
     subtitle: "Failure!",
     message: "Error: <%= error.message %>",
-    sound: "Basso"
+    sound: "Basso",
   })(err);
   this.emit("end");
 };
@@ -58,7 +58,7 @@ let onError = function(err) {
 function fileArray(theme) {
   return [
     bases.scss + "theme/_" + theme + ".scss",
-    bases.scss + "base/_" + "markdown" + ".scss"
+    bases.scss + "base/_" + "markdown" + ".scss",
   ];
 }
 
@@ -72,7 +72,7 @@ function scss(theme) {
     .pipe(autoprefixer())
     .pipe(gulp.dest(bases.dist + theme + "/"))
     .pipe(
-      cleanCSS({ debug: true }, function(details) {
+      cleanCSS({ debug: true }, function (details) {
         console.log(details.name + ": " + details.stats.originalSize + " B");
         console.log(details.name + ": " + details.stats.minifiedSize + " B");
       })
@@ -87,7 +87,7 @@ function scss(theme) {
 // all scss task
 function scssAll() {
   return Promise.all(
-    themes.map(theme => {
+    themes.map((theme) => {
       return scss(theme);
     })
   );
@@ -100,17 +100,17 @@ function clean() {
 function watch() {
   browserSync.init({
     server: {
-      baseDir: bases.demo
+      baseDir: bases.demo,
     },
     open: false,
-    port: 2333
+    port: 2333,
   });
   gulp.watch(bases.src + demo.scss, scssAll);
   gulp
     .watch([
       bases.demo + demo.html,
       bases.demo + demo.md,
-      bases.demo + demo.css
+      bases.demo + demo.css,
     ])
     .on("change", reload);
 }

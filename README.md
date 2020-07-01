@@ -13,6 +13,9 @@
 
 ## Theme
 
+![Planet](./img/planet.png)
+![Blood](./img/blood.png)
+
 - [x] Planst(defaiult): violet wandering planet
 - [ ] Blood
 - [ ] Pure
@@ -28,16 +31,12 @@
 - JSDELIVR: <https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css>
 - unpkg: <https://unpkg.com/star-markdown-css/dist/planet/planet-markdown.min.css>
 
-### NPM
-
-```sh
-npm install star-markdown-css
-```
-
-### Yarn
+### Yarn Or NPM
 
 ```sh
 yarn add star-markdown-css
+# or
+npm install star-markdown-css
 ```
 
 ## Usage
@@ -115,24 +114,24 @@ In a vue component.
   export default {
     name: "MdViewer",
     components: {
-      VueMarkdown
+      VueMarkdown,
     },
     props: {
       src: {
         type: String,
-        default: ""
-      }
+        default: "",
+      },
     },
-    data: function() {
+    data: function () {
       return {
-        mdText: ""
+        mdText: "",
       };
     },
     created() {
-      axios.get(this.src).then(res => {
+      axios.get(this.src).then((res) => {
         this.mdText = res.data;
       });
-    }
+    },
   };
 </script>
 

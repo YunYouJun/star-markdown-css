@@ -1,27 +1,26 @@
+.table-container {
+  overflow: auto;
+}
+
 table {
-  display: block;
   width: 100%;
   overflow: auto;
   border-spacing: 0;
   border-collapse: collapse;
-  th {
-    font-weight: 600;
-  }
+
   th,
   td {
     padding: 6px 13px;
-    border: 1px solid $table-td-border-color;
+    border: 1px solid #999;
   }
-  tr {
-    background-color: #fff;
-    border-top: 1px solid $table-tr-border-color;
-  }
-  tr:nth-child(2n) {
-    background-color: $table-tr-2n-background-color;
+
+  thead th {
+    font-weight: 600;
   }
 }
 
-td,
-th {
-  padding: 0;
+table > tbody > tr {
+  &:hover {
+    background-color: var(--hty-bg-color, #f2f2f2);
+  }
 }

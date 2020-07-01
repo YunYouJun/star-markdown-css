@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
 code,
 pre {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-    monospace;
-  font-size: 1em;
+  font-family: "Source Code Pro", "Courier New", Courier, Consolas, Monaco,
+    SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
 }
 
 code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27, 31, 35, 0.05);
+  padding: 3px 6px;
+  font-size: 0.85rem;
+  color: var(--hty-secondary-text-color);
+  background: var(--hty-bg-color, #f2f2f2);
   border-radius: 3px;
 }
 

@@ -6,7 +6,15 @@ $color: #24292e !default;
 $color-primary: #000000 !default;
 $color-primary-light: lighten($color-primary, 50%) !default;
 $bottom-color: $color-primary-light !default;
+// header h6=1rem
+$h1-font-size: 3rem !default;
+$h2-font-size: 2.6rem !default;
+$h3-font-size: 2.2rem !default;
+$h4-font-size: 1.8rem !default;
+$h5-font-size: 1.4rem !default;
+$h6-font-size: 1rem !default;
 // font
+$line-height: 1.5 !default;
 $font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif !default;
 $font-weight-base: 400 !default;
 $font-weight-bold: 600 !default;
@@ -14,7 +22,6 @@ $font-weight-heading: 500 !default;
 // hr
 $hr-height: 0.2rem !default;
 $hr-background-color: #e1e4e8 !default;
-$hr-background: $color !default;
 // blockquote
 $blockquote-color: #6a737d !default;
 $blockquote-border-left-color: #dfe2e5 !default;
@@ -26,3 +33,14 @@ $link-color: #0366d6 !default;
 $table-td-border-color: #dfe2e5 !default;
 $table-tr-border-color: #c6cbd1 !default;
 $table-tr-2n-background-color: #f6f8fa !default;
+
+:root {
+  // basic
+  --smc-theme-name: $theme-name;
+  --smc-bg-color: $background;
+  --smc-color: $color;
+  // color
+  --smc-color-primary: $color-primary;
+  // link
+  --smc-link-color: $link-color;
+}

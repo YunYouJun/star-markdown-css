@@ -1,21 +1,18 @@
-:root {
-  --theme-bgcolor: #{$background};
-}
 #{$bodyClass} {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background: $background;
-  color: $color;
+  background: var(--smc-bg-color);
+  color: var(--smc-color);
   font-family: $font-family;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: $line-height;
   overflow-wrap: break-word;
   font-weight: $font-weight-base;
   @import "./base";
   @import "./blockquote";
   @import "./code";
   @import "./form";
-  @import "./image";
+  @import "./media";
   @import "./link";
   @import "./list";
   @import "./table";

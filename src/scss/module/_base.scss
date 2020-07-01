@@ -11,12 +11,6 @@
 
 * {
   box-sizing: border-box;
-  & > :first-child {
-    margin-top: 0 !important;
-  }
-  & > :last-child {
-    margin-bottom: 0 !important;
-  }
 }
 
 blockquote,
@@ -39,30 +33,13 @@ a {
 
 hr {
   background-color: $hr-background-color;
-  background: $hr-background;
-  overflow: hidden;
   height: $hr-height;
-  border: 0;
-  padding: 0;
-  margin: 20px 0;
-  &:before {
-    display: table;
-    content: "";
-  }
-  &:after {
-    display: table;
-    clear: both;
-    content: "";
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-  }
+  margin: 1.5rem 0;
 }
 
 kbd {
   display: inline-block;
-  padding: 3px 5px;
-  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-    monospace;
+  padding: 3px 6px;
   line-height: 10px;
   color: #444d56;
   vertical-align: middle;
@@ -82,7 +59,7 @@ dl {
   dt {
     padding: 0;
     margin-top: 16px;
-    font-size: 1em;
+    font-size: 1rem;
     font-style: italic;
     font-weight: 600;
   }
@@ -90,4 +67,8 @@ dl {
     padding: 0 16px;
     margin-bottom: 16px;
   }
+}
+
+summary {
+  outline: none;
 }

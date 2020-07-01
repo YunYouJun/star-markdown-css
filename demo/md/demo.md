@@ -1,8 +1,5 @@
 # Markdown CSS Demo
 
-![Planet](./img/planet.png)
-![Blood](./img/blood.png)
-
 ## Headers 标题
 
 # h1 Heading 标题
@@ -102,7 +99,7 @@ You can visit [highlight](https://github.com/highlightjs/highlight.js)
 or [Prism](https://github.com/PrismJS/prism).
 
 ```js
-var foo = function(bar) {
+var foo = function (bar) {
   return bar++;
 };
 
@@ -178,3 +175,13 @@ To reboot your computer, press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>del</kbd>
   <dt>JavaScript (JS)</dt>
   <dd>The programming language used to build advanced Web sites and applications</dd>
 </dl>
+
+Syntax highlighting ( This is not a function of star-markdown-css. )
+Syntax highlighting ( This is not a function of star-markdown-css. )Syntax highlighting ( This is not a function of star-markdown-css. )
+Syntax highlighting ( This is not a function of star-markdown-css. )
+Syntax highlighting ( This is not a function of star-markdown-css. )
+Syntax highlighting ( This is not a function of star-markdown-css. )
+Syntax highlighting ( This is not a function of star-markdown-css. )
+Syntax highlighting ( This is not a function of star-markdown-css. )
+
+Syntax highlighting ( This is not a function of star-markdown-css. )
