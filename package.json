@@ -1,6 +1,6 @@
 {
   "name": "star-markdown-css",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Markdown Css about starry.",
   "main": "dist/planet/planet-markdown.min.css",
   "repository": "https://github.com/YunYouJun/star-markdown-css.git",
