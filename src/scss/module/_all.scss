@@ -1,6 +1,10 @@
-#{$bodyClass} {
-  --smc-primary: $color-primary;
+:root {
+  --smc-primary: #{$color-primary};
+  --smc-secondary: #{$color-primary-light};
   --smc-header-bottom-color: #eaecef;
+}
+
+#{$bodyClass} {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: var(--smc-bg-color);
