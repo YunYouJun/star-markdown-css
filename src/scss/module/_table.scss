@@ -11,7 +11,7 @@ table {
   th,
   td {
     padding: 6px 13px;
-    border: 1px solid #999;
+    border: 1px solid var(--smc-primary, #999);
   }
 
   thead th {
@@ -21,6 +21,6 @@ table {
 
 table > tbody > tr {
   &:hover {
-    background-color: var(--hty-bg-color, #f2f2f2);
+    background-color: var(--hty-bg-color, #fcfcfc);
   }
 }

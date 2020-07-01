@@ -175,13 +175,3 @@ To reboot your computer, press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>del</kbd>
   <dt>JavaScript (JS)</dt>
   <dd>The programming language used to build advanced Web sites and applications</dd>
 </dl>
-
-Syntax highlighting ( This is not a function of star-markdown-css. )
-Syntax highlighting ( This is not a function of star-markdown-css. )Syntax highlighting ( This is not a function of star-markdown-css. )
-Syntax highlighting ( This is not a function of star-markdown-css. )
-Syntax highlighting ( This is not a function of star-markdown-css. )
-Syntax highlighting ( This is not a function of star-markdown-css. )
-Syntax highlighting ( This is not a function of star-markdown-css. )
-Syntax highlighting ( This is not a function of star-markdown-css. )
-
-Syntax highlighting ( This is not a function of star-markdown-css. )

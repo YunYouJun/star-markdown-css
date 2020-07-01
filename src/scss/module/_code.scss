@@ -19,7 +19,6 @@ pre {
   & > code {
     padding: 0;
     margin: 0;
-    font-size: 100%;
     word-break: normal;
     white-space: pre;
     background: transparent;
@@ -30,8 +29,6 @@ pre {
   overflow-wrap: normal;
   padding: 16px;
   overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
   background-color: $code-background-color;
   border-radius: 3px;
   code {
@@ -48,15 +45,13 @@ pre {
 }
 
 .highlight {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   pre {
     margin-bottom: 0;
     word-break: normal;
-    padding: 16px;
+    padding: 1rem;
     overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
     background-color: $code-background-color;
-    border-radius: 3px;
+    border-radius: 0.2rem;
   }
 }

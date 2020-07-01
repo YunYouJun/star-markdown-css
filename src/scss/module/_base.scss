@@ -32,7 +32,7 @@ a {
 }
 
 hr {
-  background-color: $hr-background-color;
+  background-color: var(--smc-primary, #333);
   height: $hr-height;
   margin: 1.5rem 0;
 }
