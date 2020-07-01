@@ -24,6 +24,7 @@
     "src/**/*.scss"
   ],
   "scripts": {
+    "prepublish": "npm run build",
     "build": "gulp build",
     "dev": "yarn start",
     "start": "gulp"
