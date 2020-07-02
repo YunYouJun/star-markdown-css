@@ -2,6 +2,7 @@
   --smc-primary: #{$color-primary};
   --smc-secondary: #{$color-primary-light};
   --smc-header-bottom-color: #eaecef;
+  --blockquote-border-left-color: var(--smc-secondary);
 }
 
 #{$bodyClass} {
