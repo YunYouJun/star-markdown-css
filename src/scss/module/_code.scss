@@ -4,9 +4,9 @@ code,
 pre {
   font-family: "Source Code Pro", "Courier New", Courier, Consolas, Monaco,
     SFMono-Regular, Menlo, monospace;
-  font-size: 0.85rem;
 }
 
+// for inline code
 code {
   padding: 3px 6px;
   font-size: 0.85rem;
@@ -24,10 +24,10 @@ pre {
   background-color: var(--code-bg-color, $code-background-color);
   border-radius: 3px;
   & > code {
+    font-size: 0.85rem;
     white-space: pre;
   }
   code {
-    font-size: 0.85rem;
     display: inline;
     padding: 0;
     margin: 0;
@@ -36,17 +36,5 @@ pre {
     word-break: normal;
     background-color: transparent;
     border: 0;
-  }
-}
-
-.highlight {
-  margin-bottom: 1rem;
-  pre {
-    margin-bottom: 0;
-    word-break: normal;
-    padding: 1rem;
-    overflow: auto;
-    background-color: $code-background-color;
-    border-radius: 0.2rem;
   }
 }
