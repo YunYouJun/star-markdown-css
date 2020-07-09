@@ -7,7 +7,7 @@
 ![npm](https://img.shields.io/npm/dt/star-markdown-css.svg)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/star-markdown-css.svg)
 ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/star-markdown-css.svg)
-[![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/star-markdown-css)](https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css)
+[![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/star-markdown-css)](https://cdn.jsdelivr.net/npm/star-markdown-css/dist/yun/yun-markdown.min.css)
 
 - [Demo](https://yunyoujun.github.io/star-markdown-css)
 
