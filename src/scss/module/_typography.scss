@@ -17,7 +17,7 @@ h6 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-weight: $font-weight-heading;
-  line-height: 1.2;
+  line-height: 1.5;
   .octicon-link {
     color: #1b1f23;
     vertical-align: middle;
@@ -33,13 +33,11 @@ h6 {
 
 h1 {
   font-size: $h1-font-size;
-  padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--smc-header-bottom-color);
 }
 
 h2 {
   font-size: $h2-font-size;
-  padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--smc-header-bottom-color);
 }
 
