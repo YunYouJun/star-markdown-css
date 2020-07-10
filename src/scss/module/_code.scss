@@ -11,7 +11,7 @@ code {
   padding: 3px 6px;
   font-size: 0.85rem;
   color: var(--hty-secondary-text-color);
-  background: var(--hty-bg-color, #f2f2f2);
+  background: var(--smc-code-bg-color, #f2f2f2);
   border-radius: 3px;
 }
 
@@ -21,7 +21,7 @@ pre {
   overflow-wrap: normal;
   padding: 1rem;
   overflow: auto;
-  background-color: var(--code-bg-color, $code-background-color);
+  background-color: var(--smc-code-bg-color, $code-background-color);
   border-radius: 3px;
   & > code {
     font-size: 0.85rem;

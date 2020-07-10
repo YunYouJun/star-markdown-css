@@ -3,6 +3,7 @@
   --smc-secondary: #{$color-primary-light};
   --smc-header-bottom-color: #eaecef;
   --blockquote-border-left-color: var(--smc-secondary);
+  --smc-code-bg-color: var(--hty-bg-color);
 }
 
 #{$bodyClass} {
