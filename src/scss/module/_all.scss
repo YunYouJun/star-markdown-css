@@ -1,4 +1,6 @@
 :root {
+  --smc-theme-name: $theme-name;
+  --smc-color: #{$color};
   --smc-primary: #{$color-primary};
   --smc-secondary: #{$color-primary-light};
   --smc-header-bottom-color: #eaecef;
@@ -13,7 +15,6 @@
   color: var(--smc-color);
   font-family: $font-family;
   font-size: 1rem;
-  font-weight: $font-weight-base;
   line-height: $line-height;
   overflow-wrap: break-word;
   @import "./base";
