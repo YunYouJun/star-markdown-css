@@ -3,7 +3,7 @@
 > Markdown Css about starry.
 
 ![Demo](https://github.com/YunYouJun/star-markdown-css/workflows/Demo/badge.svg)
-[![npm](https://img.shields.io/npm/v/star-markdown-css.svg)](https://www.npmjs.com/package/star-markdown-css)
+[![npm](https://img.shields.io/npm/v/star-markdown-css.svg)](https://www.npmjs.com/package/star-markdown-css/)
 ![npm](https://img.shields.io/npm/dt/star-markdown-css.svg)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/star-markdown-css.svg)
 ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/star-markdown-css.svg)
