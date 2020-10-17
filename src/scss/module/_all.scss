@@ -6,6 +6,8 @@
   --smc-header-bottom-color: #eaecef;
   --blockquote-border-left-color: var(--smc-secondary);
   --smc-code-bg-color: var(--hty-bg-color);
+  // link
+  --smc-link-color: var(--smc-primary);
 }
 
 #{$bodyClass} {

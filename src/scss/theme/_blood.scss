@@ -8,8 +8,6 @@ $font-weight-heading: 900 !default;
 // blockquote
 $blockquote-color: $color-primary;
 $blockquote-border-left-color: $color-primary-light;
-// link
-$link-color: $color-primary-lighter;
 
 :root {
   // basic
@@ -18,4 +16,6 @@ $link-color: $color-primary-lighter;
   --smc-color: #d81e06;
   // color
   --smc-header-bottom-color: var(--smc-color);
+  // link
+  --smc-link-color: #{$color-primary-lighter};
 }
