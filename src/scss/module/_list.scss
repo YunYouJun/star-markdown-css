@@ -1,6 +1,5 @@
 ul,
 ol {
-  margin: 0.5rem 0;
   padding-left: 2em;
   ul,
   ol {
@@ -17,11 +16,9 @@ ol {
 
 li {
   overflow-wrap: break-all;
+  margin-top: 0.25em;
   & > p {
     margin-top: 16px;
-  }
-  & + li {
-    margin-top: 0.25em;
   }
 }
 
