@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="star-markdown-css demo" />
-    <title>Star Markdown CSS Demo</title>
-    <link rel="icon" type="image/png" href="./img/planet.png" />
-    <!-- <link rel="prefetch" href="./css/yun-markdown.min.css" as="style" /> -->
-    <!-- <link rel="prefetch" href="./css/planet-markdown.min.css" as="style" /> -->
-    <!-- <link rel="prefetch" href="./css/blood-markdown.min.css" as="style" /> -->
-    <!-- <link rel="prefetch" href="./css/earth-markdown.min.css" as="style" /> -->
-    <!-- <link title="theme" rel="stylesheet" href="./css/yun-markdown.min.css" /> -->
-    <script>
-      (function() {
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
-        if (setting === 'dark' || (prefersDark && setting !== 'light'))
-          document.documentElement.classList.toggle('dark', true)
-      })()
-    </script>
-  </head>
 
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="star-markdown-css demo" />
+  <title>Star Markdown CSS Demo</title>
+  <link rel="icon" type="image/png" href="./img/planet.png" />
+  <script>
+    (function () {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+  </script>
+</head>
 
-    <github-corners repo="YunYouJun/star-markdown-css" blank fill="#0078e7"></github-corners>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/wc-github-corners@latest"></script>
-  </body>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+
+  <github-corners repo="YunYouJun/star-markdown-css" blank fill="#0078e7"></github-corners>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/wc-github-corners@latest"></script>
+</body>
+
 </html>
