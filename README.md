@@ -13,8 +13,8 @@
 
 ## Theme
 
-![Planet](./img/planet.png)
-![Blood](./img/blood.png)
+![Planet](./demo/public/img/planet.png)
+![Blood](./demo/public/img/blood.png)
 
 - [x] Planst(defaiult): violet wandering planet
 - [ ] Blood
@@ -157,9 +157,9 @@ In a vue component.
 
 ```sh
 # Install Dependencies
-yarn
+pnpm
 # start dev
-yarn dev
+pnpm dev
 # You can see in http://localhost:2333
 # Custom port in gulpfile.js about 'browser-sync'
 ```

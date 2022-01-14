@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../base/var" as *;
+
 code,
 pre {
   font-family: "Source Code Pro", Consolas, Monaco, SFMono-Regular,
@@ -9,7 +12,7 @@ code {
   padding: 3px 6px;
   font-size: 0.85rem;
   color: var(--hty-secondary-text-color);
-  background: var(--smc-code-bg-color, #f2f2f2);
+  background: var(--smc-code-bg-color);
   border-radius: 3px;
 }
 
@@ -19,7 +22,7 @@ pre {
   overflow-wrap: normal;
   padding: 1rem;
   overflow: auto;
-  background-color: var(--smc-code-bg-color, $code-background-color);
+  background-color: var(--smc-code-bg-color);
   border-radius: 3px;
   & > code {
     font-size: 0.85rem;

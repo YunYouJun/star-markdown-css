@@ -1,13 +1,5 @@
-&::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-&::before {
-  display: table;
-  content: "";
-}
+@use "sass:map";
+@use "../base/var" as *;
 
 * {
   box-sizing: border-box;
@@ -23,7 +15,7 @@ a {
 
 hr {
   background-color: var(--smc-primary, #333);
-  height: $hr-height;
+  height: map.get($hr, 'height');
   margin: 1.5rem 0;
 }
 

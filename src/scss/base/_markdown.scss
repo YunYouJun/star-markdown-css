@@ -1,3 +1,15 @@
 $bodyClass: ".markdown-body";
-@import "src/scss/base/_variate.scss";
-@import "src/scss/module/all";
+
+@use "./vars" as *;
+
+#{$bodyClass} {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: var(--smc-bg-color);
+  color: var(--smc-text-color);
+  font-family: var(--smc-font-family);
+  font-size: 1rem;
+  line-height: var(--smc-line-height);
+  overflow-wrap: break-word;
+  @import "../module/all";
+}

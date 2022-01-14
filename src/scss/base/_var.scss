@@ -1,0 +1,85 @@
+@use "sass:map";
+
+$theme-name: "planet" !default;
+
+// basic
+$bg-color: transparent !default;
+$text-color: #24292e !default;
+
+// color
+$color-primary: #000000 !default;
+
+$colors: () !default;
+$colors: map.merge(
+  (
+    "primary": $color-primary,
+    "primary-light": lighten($color-primary, 50%),
+    "primary-lighter": lighten($color-primary, 60%),
+  ),
+  $colors
+);
+
+// font
+$line-height: 1.5 !default;
+$font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif !default;
+
+// heading
+$heading: () !default;
+$heading: map.deep-merge(
+  (
+    "font-weight": 500,
+    "h1": (
+      "font-size": 3rem,
+    ),
+    "h2": (
+      "font-size": 2.6rem,
+    ),
+    "h3": (
+      "font-size": 2.2rem,
+    ),
+    "h4": (
+      "font-size": 1.8rem,
+    ),
+    "h5": (
+      "font-size": 1.4rem,
+    ),
+    "h6": (
+      "font-size": 1rem,
+    ),
+  ),
+  $heading
+);
+
+// hr
+$hr: () !default;
+$hr: map.merge(
+  (
+    height: 0.2rem,
+    "bg-color": #e1e4e8,
+  ),
+  $hr
+);
+
+// blockquote
+$blockquote-color: #6a737d !default;
+$blockquote-border-left-color: #dfe2e5 !default;
+
+// code
+$code: () !default;
+$code: map.merge(
+  (
+    "bg-color": #f6f8fa,
+  ),
+  $code
+);
+
+// table
+$table: () !default;
+$table: map.merge(
+  (
+    "td-border-color": #dfe2e5,
+    "tr-border-color": #c6cbd1,
+    "tr-2n-background-color": #f6f8fa,
+  ),
+  $table
+);

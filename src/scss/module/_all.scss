@@ -1,32 +1,10 @@
-:root {
-  --smc-theme-name: $theme-name;
-  --smc-color: #{$color};
-  --smc-primary: #{$color-primary};
-  --smc-secondary: #{$color-primary-light};
-  --smc-header-bottom-color: #eaecef;
-  --blockquote-border-left-color: var(--smc-secondary);
-  --smc-code-bg-color: var(--hty-bg-color);
-  // link
-  --smc-link-color: var(--smc-primary);
-}
-
-#{$bodyClass} {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  background: var(--smc-bg-color);
-  color: var(--smc-color);
-  font-family: $font-family;
-  font-size: 1rem;
-  line-height: $line-height;
-  overflow-wrap: break-word;
-  @import "./base";
-  @import "./blockquote";
-  @import "./code";
-  @import "./form";
-  @import "./media";
-  @import "./link";
-  @import "./list";
-  @import "./table";
-  @import "./typography";
-  @import "./utility";
-}
+  @use "./base";
+  @use "./blockquote";
+  @use "./code";
+  @use "./form";
+  @use "./media";
+  @use "./link";
+  @use "./list";
+  @use "./table";
+  @use "./typography";
+  @use "./utility";

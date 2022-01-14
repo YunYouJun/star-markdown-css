@@ -1,21 +1,26 @@
+$theme-name: "planet";
 // color
+$text-color: #d81e06;
+$bg-color: #141516;
+
 $color-primary: #be0000;
 $color-primary-light: lighten($color-primary, 20%);
 $color-primary-lighter: lighten($color-primary, 35%);
 // font
 $font-family: Noto Serif SC, serif !default;
-$font-weight-heading: 900 !default;
+
+// heading
+$heading: (
+  "font-weight": 900,
+) !default;
+
 // blockquote
 $blockquote-color: $color-primary;
 $blockquote-border-left-color: $color-primary-light;
 
 :root {
-  // basic
-  --smc-theme-name: "planet";
-  --smc-bg-color: #141516;
-  --smc-color: #d81e06;
   // color
-  --smc-header-bottom-color: var(--smc-color);
+  --smc-header-bottom-color: var(--smc-text-color);
   // link
   --smc-link-color: #{$color-primary-lighter};
 }

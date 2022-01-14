@@ -7,7 +7,12 @@ $color-primary-lighter: lighten($color-primary, 35%);
 $bottom-color: $color-primary-light;
 // font
 $font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif !default;
-$font-weight-heading: 300;
+
+// heading
+$heading: (
+  "font-weight": 300,
+) !default;
+
 // hr
 $hr-height: 0.1rem;
 $hr-background-color: $color-primary-light;
@@ -17,7 +22,10 @@ $hr-background: radial-gradient(
   rgba(255, 255, 255, 0) 100%
 );
 // code
-$code-background-color: $color-primary-lighter;
+$code: (
+  "bg-color": $color-primary-lighter,
+);
+
 // table
 $table-td-border-color: $color-primary-light;
 $table-tr-border-color: $color-primary-light;
