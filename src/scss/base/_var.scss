@@ -7,14 +7,13 @@ $bg-color: transparent !default;
 $text-color: #24292e !default;
 
 // color
-$color-primary: #000000 !default;
-
-$colors: () !default;
+$colors: (
+  "primary": #000000,
+) !default;
 $colors: map.merge(
   (
-    "primary": $color-primary,
-    "primary-light": lighten($color-primary, 50%),
-    "primary-lighter": lighten($color-primary, 60%),
+    "primary-light": lighten(map.get($colors, "primary"), 50%),
+    "primary-lighter": lighten(map.get($colors, "primary"), 60%),
   ),
   $colors
 );
@@ -61,8 +60,14 @@ $hr: map.merge(
 );
 
 // blockquote
-$blockquote-color: #6a737d !default;
-$blockquote-border-left-color: #dfe2e5 !default;
+$blockquote: () !default;
+$blockquote: map.merge(
+  (
+    "color": #6a737d,
+    "border-left-color": #dfe2e5,
+  ),
+  $blockquote
+);
 
 // code
 $code: () !default;

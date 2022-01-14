@@ -13,11 +13,9 @@ import concat from 'gulp-concat'
 import chalk from 'chalk'
 import { Logger } from '@yunyoujun/logger'
 
-import browserSync from 'browser-sync'
 const logger = new Logger()
 
 const sass = gulpSass(dartSass)
-const reload = browserSync.create().reload
 
 const themes = ['yun', 'planet', 'blood', 'earth']
 
@@ -35,7 +33,7 @@ const demo = {
   css: 'css/common.css',
 }
 
-const onError = function(err) {
+const onError = function(err: any) {
   notify.onError({
     title: 'Gulp',
     subtitle: 'Failure!',
@@ -54,6 +52,7 @@ function scss(theme: string) {
       sass
         .sync({
           outputStyle: 'expanded',
+          includePaths: ['./src/scss/theme'],
         })
         .on('error', sass.logError),
     )
@@ -72,7 +71,6 @@ function scss(theme: string) {
     .pipe(rename({ suffix: '.min' }))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(gulp.dest(`${bases.dist + theme}/`))
-    .pipe(reload({ stream: true }))
 }
 
 // all scss task
@@ -93,13 +91,6 @@ export function clean() {
 }
 
 export function watch() {
-  browserSync.init({
-    server: {
-      baseDir: bases.demo,
-    },
-    open: false,
-    port: 2333,
-  })
   gulp.watch(bases.src + demo.scss, scssAll)
   gulp
     .watch([
@@ -107,7 +98,6 @@ export function watch() {
       bases.demo + demo.md,
       bases.demo + demo.css,
     ])
-    .on('change', reload)
 }
 
 /**

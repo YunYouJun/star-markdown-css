@@ -1,26 +1,40 @@
-$theme-name: "planet";
-// color
-$text-color: #d81e06;
-$bg-color: #141516;
+@use "sass:map";
 
-$color-primary: #be0000;
-$color-primary-light: lighten($color-primary, 20%);
-$color-primary-lighter: lighten($color-primary, 35%);
-// font
-$font-family: Noto Serif SC, serif !default;
+$colors: (
+  "primary": #be0000,
+);
 
-// heading
-$heading: (
-  "font-weight": 900,
-) !default;
+$colors: map.merge(
+  (
+    "primary-light": lighten(map.get($colors, "primary"), 20%),
+    "primary-lighter": lighten(map.get($colors, "primary"), 35%),
+  ),
+  $colors
+);
 
-// blockquote
-$blockquote-color: $color-primary;
-$blockquote-border-left-color: $color-primary-light;
-
-:root {
+@forward "../base/_var" with (
+  $theme-name: "planet",
   // color
-  --smc-header-bottom-color: var(--smc-text-color);
-  // link
-  --smc-link-color: #{$color-primary-lighter};
-}
+  $text-color: #d81e06,
+  $bg-color: #141516,
+  $colors: $colors,
+  // font
+  $font-family:
+    (
+      Noto Serif SC,
+      serif,
+    ),
+  // heading
+  $heading:
+    (
+      "font-weight": 900,
+    ),
+  // blockquote
+  $blockquote:
+    (
+      "color": map.get($colors, "primary"),
+      "border-left-color": map.get($colors, "primary-light"),
+    )
+);
+
+@use "../base/markdown";

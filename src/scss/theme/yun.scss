@@ -1,21 +1,23 @@
 @use "sass:map";
 
-$color-primary: #0078e7;
-$color-primary-light: lighten($color-primary, 20%);
-$color-primary-lighter: lighten($color-primary, 35%);
+$colors: (
+  "primary": #0078e7,
+);
 
-@forward "../base/var" with (
+$colors: map.merge(
+  (
+    "primary-light": lighten(map.get($colors, "primary"), 20%),
+    "primary-lighter": lighten(map.get($colors, "primary"), 35%),
+  ),
+  $colors
+);
+
+@forward "../base/_var" with (
   $theme-name: "yun",
   // basic
   $bg-color: transparent,
-  $color-primary: $color-primary,
   // color
-  $colors:
-    (
-      "primary": $color-primary,
-      "primary-light": $color-primary-light,
-      "primary-lighter": $color-primary-lighter,
-    ),
+  $colors: $colors,
   // heading
   $heading:
     (
@@ -55,14 +57,14 @@ $color-primary-lighter: lighten($color-primary, 35%);
   // code
   $code:
     (
-      "bg-color": lighten($color-primary, 50%),
+      "bg-color": lighten(map.get($colors, "primary"), 50%),
     ),
   // table
   $table:
     (
-      "td-border-color": $color-primary-light,
-      "tr-border-color": $color-primary-light,
-      "tr-2n-background-color": rgba($color-primary-light, 0.08),
+      "td-border-color": map.get($colors, "primary-light"),
+      "tr-border-color": map.get($colors, "primary-light"),
+      "tr-2n-background-color": rgba(map.get($colors, "primary-light"), 0.08),
     )
 );
 

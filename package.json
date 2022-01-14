@@ -1,6 +1,6 @@
 {
   "name": "star-markdown-css",
-  "version": "0.1.25",
+  "version": "0.2.0",
   "description": "Markdown Css about starry.",
   "main": "dist/planet/planet-markdown.min.css",
   "repository": "https://github.com/YunYouJun/star-markdown-css.git",
@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.16.0",
-    "@types/browser-sync": "^2.26.2",
     "@types/gulp": "^4.0.9",
     "@types/gulp-autoprefixer": "^0.0.33",
     "@types/gulp-clean-css": "^4.3.0",
@@ -42,7 +41,6 @@
     "@types/node": "^17.0.8",
     "@types/sass": "^1.16.1",
     "@yunyoujun/logger": "^0.1.4",
-    "browser-sync": "^2.27.5",
     "del": "^6.0.0",
     "eslint": "^8.6.0",
     "gulp": "^4.0.2",

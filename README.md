@@ -160,8 +160,7 @@ In a vue component.
 pnpm
 # start dev
 pnpm dev
-# You can see in http://localhost:2333
-# Custom port in gulpfile.js about 'browser-sync'
+# You can see in http://localhost:3333
 ```
 
 ### Build

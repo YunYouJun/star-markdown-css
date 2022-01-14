@@ -5,7 +5,7 @@
 :root {
   --smc-theme-name: $theme-name;
   --smc-text-color: #{$text-color};
-  --smc-primary: #{$color-primary};
+  --smc-primary: #{map.get($colors, "primary")};
   --smc-secondary: #{map.get($colors, "primary-light")};
 
   --smc-font-family: #{$font-family};
