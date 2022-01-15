@@ -178,3 +178,9 @@ To reboot your computer, press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>del</kbd>
 </dl>
 
 <img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat" />
+
+## Image Align
+
+<img src="https://octodex.github.com/images/dojocat.jpg" width="200" align="left" alt="Alt text" title="The Dojocat" />
+nihao
+<img src="https://octodex.github.com/images/dojocat.jpg" width="200" align="right" alt="Alt text" title="The Dojocat" />

@@ -17,11 +17,13 @@ img {
   }
 
   &[align="right"] {
-    padding-left: 20px;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
   }
 
   &[align="left"] {
-    padding-right: 20px;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
   }
 }
 
