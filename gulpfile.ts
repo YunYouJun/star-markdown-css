@@ -34,6 +34,7 @@ const demo = {
 }
 
 const onError = function(err: any) {
+  console.log(err)
   notify.onError({
     title: 'Gulp',
     subtitle: 'Failure!',
@@ -104,8 +105,8 @@ export function watch() {
  * clean and build scss
  * @returns
  */
-export function build() {
-  clean()
+export async function build() {
+  await clean()
   return scssAll()
 }
 
