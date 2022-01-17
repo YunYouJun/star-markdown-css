@@ -16,7 +16,7 @@
 ![Planet](./demo/public/img/planet.png)
 ![Blood](./demo/public/img/blood.png)
 
-- [x] Planst(defaiult): violet wandering planet
+- [x] Planet(default): violet wandering planet
 - [ ] Blood
 - [ ] Pure
 
