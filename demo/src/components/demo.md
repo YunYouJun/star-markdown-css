@@ -139,9 +139,11 @@ Some text to show that the reference links can follow later.
 [1]: https://yunyoujun.cn
 [link text itself]: https://star-markdown-css.yunyoujun.cn
 
+- [Octodex GitHub](https://octodex.github.com/)
+
 ## Images
 
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![小云](https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/yun-alpha-compressed.png "Xiao Yun")
 
 Like links, Images also have a footnote style syntax
 
@@ -149,7 +151,7 @@ Like links, Images also have a footnote style syntax
 
 With a reference later in the document defining the URL location:
 
-[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
+[id]: https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha.png "Good"
 
 ## Emoji
 
@@ -177,10 +179,11 @@ To reboot your computer, press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>del</kbd>
   <dd>The programming language used to build advanced Web sites and applications</dd>
 </dl>
 
-<img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat" />
+<img src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha.png" alt="Alt text" title="The Dojocat" />
 
 ## Image Align
 
-<img src="https://octodex.github.com/images/dojocat.jpg" width="200" align="left" alt="Alt text" title="The Dojocat" />
-nihao
-<img src="https://octodex.github.com/images/dojocat.jpg" width="200" align="right" alt="Alt text" title="The Dojocat" />
+<img src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha.png" width="200" align="left" alt="Alt text" title="Good" />
+<img src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha.png" width="200" align="right" alt="Alt text" title="Good" />
+
+Say: Good!
