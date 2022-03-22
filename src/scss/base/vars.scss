@@ -1,21 +1,12 @@
 @use "sass:map";
-@use "./var" as *;
+@use "./palette" as *;
+@use "../utils/" as *;
 
 // css var
 :root {
-  --smc-theme-name: $theme-name;
-  --smc-text-color: #{$text-color};
-  --smc-primary: #{map.get($colors, "primary")};
-  --smc-secondary: #{map.get($colors, "primary-light")};
+  @include set-css-var-from-map($light);
+}
 
-  --smc-font-family: #{$font-family};
-  --smc-line-height: #{$line-height};
-
-  --smc-header-bottom-color: #eaecef;
-  --blockquote-border-left-color: var(--smc-secondary);
-
-  --smc-code-bg-color: var(--hty-bg-color, #{map.get($code, "bg-color")});
-
-  // link
-  --smc-link-color: var(--smc-primary);
+html.dark {
+  @include set-css-var-from-map($dark);
 }
