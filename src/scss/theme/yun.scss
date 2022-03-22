@@ -54,11 +54,6 @@ $colors: map.merge(
     (
       "height": 2px,
     ),
-  // code
-  $code:
-    (
-      "bg-color": lighten(map.get($colors, "primary"), 50%),
-    ),
   // table
   $table:
     (

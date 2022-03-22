@@ -7,6 +7,9 @@ import TaskLists from 'markdown-it-task-lists'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 
+import Unocss from 'unocss/vite'
+import { presetAttributify, presetIcons, presetUno } from 'unocss'
+
 const markdownWrapperClasses = 'markdown-body'
 
 export default defineConfig({
@@ -37,6 +40,22 @@ export default defineConfig({
         })
         md.use(TaskLists)
       },
+    }),
+
+    // https://github.com/antfu/unocss
+    // see unocss.config.ts for config
+    Unocss({
+      shortcuts: [
+        ['icon-btn', 'shadow transition duration-200 ease-in-out hover:shadow-md'],
+      ],
+      presets: [
+        presetUno(),
+        presetAttributify(),
+        presetIcons({
+          scale: 1.2,
+          warn: true,
+        }),
+      ],
     }),
   ],
 

@@ -1,6 +1,8 @@
 @use "sass:map";
 @use "./var" as *;
 
+$c-primary: map.get($colors, "primary");
+
 // palette
 $light: () !default;
 $light: map.merge(
@@ -8,12 +10,15 @@ $light: map.merge(
     "theme-name": $theme-name,
     "font-family": $font-family,
     "line-height": $line-height,
+    "c-primary-rgb": #{red($c-primary),
+    green(
+      $c-primary,
+    ),
+    blue($c-primary)},
     "text-color": $text-color,
-    "primary": map.get($colors, "primary"),
-    "secondary": map.get($colors, "primary-light"),
     "header-bottom-color": #eaecef,
-    "border-color": var(--smc-secondary),
-    "code-bg-color": var(--hty-bg-color, #{map.get($code, "bg-color")}),
+    "border-color": var(--smc-c-primary-light),
+    "code-bg-color": #f6f8fa,
     "link-color": var(--smc-primary),
   ),
   $light
@@ -23,6 +28,8 @@ $dark: () !default;
 $dark: map.merge(
   (
     "text-color": #f8f8f2,
+    "code-bg-color": #242424,
+    "link-color": lighten(map.get($colors, "primary"), 10%),
   ),
   $dark
 );

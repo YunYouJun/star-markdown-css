@@ -3,6 +3,7 @@ import { useHead } from '@vueuse/head'
 
 import Intro from './components/intro.md'
 import Demo from './components/demo.md'
+import BaseMenu from './components/BaseMenu.vue'
 
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,
@@ -24,6 +25,7 @@ window.onhashchange = function() {
 </script>
 
 <template>
+  <BaseMenu />
   <Intro />
   <hr>
   <Demo />

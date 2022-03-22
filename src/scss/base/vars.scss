@@ -1,9 +1,11 @@
 @use "sass:map";
 @use "./palette" as *;
+@use "./var" as *;
 @use "../utils/" as *;
 
 // css var
 :root {
+  @include set-css-var-from-map($colors, "c");
   @include set-css-var-from-map($light);
 }
 

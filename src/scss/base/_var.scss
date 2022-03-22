@@ -69,15 +69,6 @@ $blockquote: map.merge(
   $blockquote
 );
 
-// code
-$code: () !default;
-$code: map.merge(
-  (
-    "bg-color": #f6f8fa,
-  ),
-  $code
-);
-
 // table
 $table: () !default;
 $table: map.merge(

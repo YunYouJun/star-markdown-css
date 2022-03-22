@@ -1,6 +1,29 @@
 body {
   margin: 0;
-  background-color: var(--smc-bg-color);
+}
+
+.dark {
+  background-color: #1a1a1a;
+}
+
+.icon-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  outline: none;
+
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+  background-color: transparent;
+
+  border-radius: 50%;
+  border: none;
+
+  color: var(--smc-text-color);
 }
 
 /* markdown-layout */
@@ -25,7 +48,7 @@ hr {
 
 /* scrollbar */
 * {
-  scrollbar-color: transparent var(--smc-secondary);
+  scrollbar-color: transparent var(--smc-c-primary-light);
 }
 
 ::-webkit-scrollbar {
@@ -39,9 +62,9 @@ hr {
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--smc-secondary);
+  background: var(--smc-c-primary-light);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--smc-primary);
+  background: var(--smc-c-primary-light);
 }
