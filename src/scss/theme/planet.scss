@@ -37,11 +37,6 @@ $colors: map.merge(
           rgba(255, 255, 255, 0) 100%
         ),
     ),
-  // code
-  $code:
-    (
-      "bg-color": map.get($colors, "primary-lighter"),
-    ),
   // table
   $table:
     (
