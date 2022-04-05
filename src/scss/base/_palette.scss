@@ -8,7 +8,6 @@ $light: () !default;
 $light: map.merge(
   (
     "theme-name": $theme-name,
-    "font-family": $font-family,
     "line-height": $line-height,
     "c-primary-rgb": #{red($c-primary),
     green(
@@ -30,6 +29,7 @@ $dark: map.merge(
     "text-color": #f8f8f2,
     "code-bg-color": #242424,
     "link-color": lighten(map.get($colors, "primary"), 10%),
+    "header-bottom-color": #333,
   ),
   $dark
 );

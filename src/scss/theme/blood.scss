@@ -21,8 +21,7 @@ $colors: map.merge(
   // font
   $font-family:
     (
-      Noto Serif SC,
-      serif,
+      "serif": "Noto Serif SC, serif"
     ),
   // heading
   $heading:

@@ -3,6 +3,11 @@
 @use "./var" as *;
 @use "../utils/" as *;
 
+// common
+:root {
+  @include set-css-var-from-map($font-family, "font");
+}
+
 // css var
 :root {
   @include set-css-var-from-map($colors, "c");

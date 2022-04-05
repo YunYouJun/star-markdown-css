@@ -2,7 +2,8 @@
 @use "../base/var" as *;
 
 strong {
-  font-weight: bolder;
+  font-family: var(--smc-font-serif);
+  font-weight: 900;
 }
 
 p {

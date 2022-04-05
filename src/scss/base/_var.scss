@@ -20,7 +20,18 @@ $colors: map.merge(
 
 // font
 $line-height: 1.5 !default;
-$font-family: Raleway, "PingFang SC", "Microsoft YaHei", Arial, sans-serif !default;
+
+$font-family: () !default;
+$font-family: map.merge(
+  (
+    "sans":
+      'Raleway, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif',
+    "serif":
+      "'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif",
+    "mono": 'Menlo, Monaco, Consolas, "Courier New", monospace',
+  ),
+  $font-family
+);
 
 // heading
 $heading: () !default;

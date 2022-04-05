@@ -61,6 +61,7 @@ Unordered
   - Marker character change forces new list start:
   - Marker character change forces new list start:
     - you need has a unified style
+      - TEST
 - Very easy! I am used to `-`.
 
 Ordered
@@ -100,7 +101,7 @@ You can visit [highlight](https://github.com/highlightjs/highlight.js)
 or [Prism](https://github.com/PrismJS/prism).
 
 ```js
-var foo = function (bar) {
+const foo = function (bar) {
   return bar++;
 };
 

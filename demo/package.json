@@ -8,17 +8,17 @@
   },
   "devDependencies": {
     "@iconify-json/ri": "^1.1.1",
-    "@vitejs/plugin-vue": "^2.0.1",
+    "@vitejs/plugin-vue": "^2.3.1",
     "@vueuse/head": "^0.7.5",
     "markdown-it-link-attributes": "^4.0.0",
-    "markdown-it-prism": "^2.2.2",
+    "markdown-it-prism": "^2.2.3",
     "markdown-it-task-lists": "^2.1.1",
-    "unocss": "^0.29.5",
-    "vite": "^2.7.12",
-    "vite-plugin-md": "^0.11.7"
+    "unocss": "^0.30.11",
+    "vite": "^2.9.1",
+    "vite-plugin-md": "^0.12.4"
   },
   "dependencies": {
-    "@vueuse/core": "^7.5.3",
-    "vue": "^3.2.26"
+    "@vueuse/core": "^8.2.4",
+    "vue": "^3.2.31"
   }
 }

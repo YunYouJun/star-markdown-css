@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "esModuleInterop": true,
     "paths": {
       "~/*": ["demo/src/*"]

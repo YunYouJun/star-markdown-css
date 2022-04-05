@@ -13,13 +13,6 @@ $colors: map.merge(
 );
 
 @forward "../base/_var" with (
-  $font-family: (
-    Raleway,
-    "PingFang SC",
-    "Microsoft YaHei",
-    Arial,
-    sans-serif,
-  ),
   // heading
   $heading:
     (
