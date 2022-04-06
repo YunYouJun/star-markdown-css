@@ -2,7 +2,7 @@
 
 $colors: (
   "primary": #0078e7,
-);
+) !default;
 
 $colors: map.merge(
   (

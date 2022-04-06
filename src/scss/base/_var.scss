@@ -10,6 +10,7 @@ $text-color: #24292e !default;
 $colors: (
   "primary": #000000,
 ) !default;
+
 $colors: map.merge(
   (
     "primary-light": lighten(map.get($colors, "primary"), 50%),

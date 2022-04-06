@@ -18,7 +18,7 @@
     "vite-plugin-md": "^0.12.4"
   },
   "dependencies": {
-    "@vueuse/core": "^8.2.4",
+    "@vueuse/core": "^8.2.5",
     "vue": "^3.2.31"
   }
 }
