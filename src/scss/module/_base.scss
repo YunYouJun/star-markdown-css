@@ -14,8 +14,8 @@ a {
 }
 
 hr {
-  background-color: var(--smc-primary, #333);
-  height: map.get($hr, 'height');
+  background-color: var(--smc-c-primary, #333);
+  height: map.get($hr, "height");
   margin: 1.5rem 0;
 }
 
