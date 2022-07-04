@@ -7,16 +7,16 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup Node
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
+          node-version: 16.x
+          cache: pnpm
 
-      - run: npm i -g pnpm && pnpm i
+      - run: pnpm i
       - run: pnpm run build:demo
 
       - name: Deploy

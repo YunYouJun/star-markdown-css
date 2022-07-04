@@ -1,11 +1,12 @@
 {
   "name": "star-markdown-css",
   "version": "0.4.0",
+  "packageManager": "pnpm@7.4.1",
   "description": "Markdown Css about starry.",
-  "main": "dist/planet/planet-markdown.min.css",
-  "repository": "https://github.com/YunYouJun/star-markdown-css.git",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
+  "homepage": "https://smc.yunyoujun.cn",
+  "repository": "https://github.com/YunYouJun/star-markdown-css.git",
   "keywords": [
     "browser",
     "markdown",
@@ -18,6 +19,7 @@
     "planet",
     "blood"
   ],
+  "main": "dist/planet/planet-markdown.min.css",
   "files": [
     "dist/**/*.css",
     "src/**/*.scss"
@@ -27,6 +29,7 @@
     "build": "gulp build",
     "build:demo": "pnpm -C demo run build",
     "dev": "pnpm -C demo run dev",
+    "lint": "eslint .",
     "release": "bumpp --commit --push --tag",
     "start": "gulp",
     "watch": "gulp"

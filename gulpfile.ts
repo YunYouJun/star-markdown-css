@@ -33,7 +33,8 @@ const demo = {
   css: 'css/common.css',
 }
 
-const onError = function(err: any) {
+const onError = function (err: any) {
+  // eslint-disable-next-line no-console
   console.log(err)
   notify.onError({
     title: 'Gulp',

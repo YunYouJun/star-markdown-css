@@ -15,7 +15,7 @@ useHead({
   ],
 })
 
-window.onhashchange = function() {
+window.onhashchange = function () {
   const curTheme = location.hash.slice(1) || 'yun'
   const href = `./css/${curTheme}-markdown.min.css`;
 
