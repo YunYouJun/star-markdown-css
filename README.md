@@ -4,7 +4,7 @@
 
 ![Demo](https://github.com/YunYouJun/star-markdown-css/workflows/Demo/badge.svg)
 [![npm](https://img.shields.io/npm/v/star-markdown-css.svg)](https://www.npmjs.com/package/star-markdown-css/)
-![npm](https://img.shields.io/npm/dt/star-markdown-css.svg)
+[![npm](https://img.shields.io/npm/dt/star-markdown-css.svg)](https://npm-stat.com/charts.html?package=star-markdown-css)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/star-markdown-css.svg)
 ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/star-markdown-css.svg)
 [![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/star-markdown-css)](https://cdn.jsdelivr.net/npm/star-markdown-css/dist/yun/yun-markdown.min.css)
