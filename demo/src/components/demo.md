@@ -102,10 +102,10 @@ or [Prism](https://github.com/PrismJS/prism).
 
 ```js
 const foo = function (bar) {
-  return bar++;
-};
+  return bar++
+}
 
-console.log(foo(5));
+console.log(foo(5))
 ```
 
 ## Tables
@@ -180,11 +180,19 @@ To reboot your computer, press <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>del</kbd>
   <dd>The programming language used to build advanced Web sites and applications</dd>
 </dl>
 
-<img src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha.png" alt="Alt text" title="The Dojocat" />
-
 ## Image Align
 
 <img src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha.png" width="200" align="left" alt="Alt text" title="Good" />
 <img src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha.png" width="200" align="right" alt="Alt text" title="Good" />
 
 Say: Good!
+
+<img src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha.png" alt="Alt text" title="The Dojocat" />_Description_
+
+## [Sponsors](https://sponsors.yunyoujun.cn)
+
+<p align="center">
+  <a href="https://sponsors.yunyoujun.cn">
+    <img src='https://fastly.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg'/>
+  </a>
+</p>

@@ -1,23 +1,13 @@
 a {
-  color: var(--smc-link-color);
+  color: var(--smc-c-primary);
   text-decoration: none;
-  position: relative;
 
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 1px;
-    background-color: var(--smc-c-primary, dodgerblue);
-    transition: 0.2s;
-  }
+  border-bottom-color: transparent;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    &::before {
-      width: 100%;
-    }
+    color: var(--smc-link-color);
+    border-bottom: 1px solid var(--smc-link-color);
   }
 
   &:not([href]) {

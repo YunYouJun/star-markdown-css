@@ -14,11 +14,15 @@ $light: map.merge(
       $c-primary,
     ),
     blue($c-primary)},
-    "text-color": $text-color,
+
+    "c-text": #24292e,
+    "c-text-light": #555,
+    "c-text-lighter": #666,
+
     "header-bottom-color": #eaecef,
     "border-color": var(--smc-c-primary-light),
     "code-bg-color": #f6f8fa,
-    "link-color": var(--smc-c-primary),
+    "link-color": darken(map.get($colors, "primary"), 10%),
   ),
   $light
 );
@@ -26,7 +30,10 @@ $light: map.merge(
 $dark: () !default;
 $dark: map.merge(
   (
-    "text-color": #f8f8f2,
+    "c-text": #f2f2f2,
+    "c-text-light": #ddd,
+    "c-text-lighter": #eee,
+
     "code-bg-color": #242424,
     "link-color": lighten(map.get($colors, "primary"), 10%),
     "header-bottom-color": #333,

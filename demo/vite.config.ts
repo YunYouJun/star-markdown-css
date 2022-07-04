@@ -1,7 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Markdown from 'vite-plugin-md'
+import Markdown from 'vite-plugin-vue-markdown'
 
 import TaskLists from 'markdown-it-task-lists'
 import Prism from 'markdown-it-prism'
@@ -23,8 +23,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
 
-    // https://github.com/antfu/vite-plugin-md
-    // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
+    // https://github.com/antfu/vite-plugin-vue-markdown
     Markdown({
       wrapperClasses: markdownWrapperClasses,
       headEnabled: true,

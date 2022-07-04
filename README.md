@@ -95,7 +95,7 @@ In html.
 Just import it where you need it.
 
 ```js
-import "star-markdown-css";
+import 'star-markdown-css'
 ```
 
 #### Example In Vue
@@ -177,3 +177,11 @@ yarn build
 ## Thanks
 
 - [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
+
+## [Sponsors](https://sponsors.yunyoujun.cn)
+
+<p align="center">
+  <a href="https://sponsors.yunyoujun.cn">
+    <img src='https://fastly.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg'/>
+  </a>
+</p>

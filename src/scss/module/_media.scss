@@ -41,7 +41,7 @@ img {
 img + em {
   display: block;
   text-align: center;
-  color: var(--hty-secondary-text-color, #333);
+  color: var(--smc-c-text-light, #333);
   font-size: 0.9rem;
 }
 
@@ -62,4 +62,8 @@ iframe {
   img {
     max-width: 800px;
   }
+}
+
+video {
+  margin: auto;
 }
