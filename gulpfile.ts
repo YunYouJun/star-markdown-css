@@ -1,9 +1,11 @@
 import gulp from 'gulp'
 import gulpSass from 'gulp-sass'
 import dartSass from 'sass'
+// use del@6 for del api & build
 import del from 'del'
 import autoprefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
+// @ts-expect-error gulp-notify has no type
 import notify from 'gulp-notify'
 import plumber from 'gulp-plumber'
 import rename from 'gulp-rename'
@@ -42,6 +44,7 @@ const onError = function (err: any) {
     message: 'Error: <%= error.message %>',
     sound: 'Basso',
   })(err)
+  // @ts-expect-error this is gulp
   this.emit('end')
 }
 
