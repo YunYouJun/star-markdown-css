@@ -12,18 +12,6 @@ ol {
   ol {
     list-style-type: lower-roman;
   }
-
-  li {
-    list-style-type: disc;
-
-    li {
-      list-style-type: circle;
-
-      li {
-        list-style-type: square;
-      }
-    }
-  }
 }
 
 li {
