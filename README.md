@@ -102,37 +102,18 @@ import 'star-markdown-css'
 
 In a vue component.
 
+> You can try [vite-plugin-vue-markdown](https://github.com/mdit-vue/vite-plugin-vue-markdown).
+
 ```html
 <template>
-  <vue-markdown :source="mdText" class="markdown-body" />
+  <div class="markdown-body">
+    <!-- You Markdown -->
+  </div>
 </template>
 
 <script>
-  import VueMarkdown from "vue-markdown";
-  import axios from "axios";
-  import "star-markdown-css";
-  export default {
-    name: "MdViewer",
-    components: {
-      VueMarkdown,
-    },
-    props: {
-      src: {
-        type: String,
-        default: "",
-      },
-    },
-    data: function () {
-      return {
-        mdText: "",
-      };
-    },
-    created() {
-      axios.get(this.src).then((res) => {
-        this.mdText = res.data;
-      });
-    },
-  };
+import "star-markdown-css";
+// ...
 </script>
 
 <style>
@@ -149,6 +130,13 @@ In a vue component.
     }
   }
 </style>
+```
+
+Or in `main.ts`:
+
+```ts
+import 'star-markdown-css'
+// ...
 ```
 
 ## Dev

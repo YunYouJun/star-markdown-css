@@ -2,7 +2,7 @@ a {
   color: var(--smc-c-primary);
   text-decoration: none;
 
-  border-bottom-color: transparent;
+  border-bottom: 1px solid transparent;
   transition: all 0.2s ease-in-out;
 
   &:hover {

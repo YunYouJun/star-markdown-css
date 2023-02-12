@@ -13,9 +13,7 @@ import size from 'gulp-size'
 import concat from 'gulp-concat'
 
 import chalk from 'chalk'
-import { Logger } from '@yunyoujun/logger'
-
-const logger = new Logger()
+import { logger } from '@yunyoujun/logger'
 
 const sass = gulpSass(dartSass)
 

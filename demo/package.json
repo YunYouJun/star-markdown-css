@@ -7,18 +7,18 @@
     "lint": "eslint \"**/*.{vue,ts,js}\""
   },
   "dependencies": {
-    "@vueuse/core": "^9.1.1",
-    "vue": "^3.2.38"
+    "@vueuse/core": "^9.12.0",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@iconify-json/ri": "^1.1.1",
-    "@vitejs/plugin-vue": "^3.0.3",
-    "@vueuse/head": "^0.7.9",
+    "@iconify-json/ri": "^1.1.4",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vueuse/head": "^1.0.25",
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-prism": "^2.3.0",
     "markdown-it-task-lists": "^2.1.1",
-    "unocss": "^0.45.15",
-    "vite": "^3.0.9",
-    "vite-plugin-vue-markdown": "^0.21.1"
+    "unocss": "^0.49.4",
+    "vite": "^4.1.1",
+    "vite-plugin-vue-markdown": "^0.22.4"
   }
 }
