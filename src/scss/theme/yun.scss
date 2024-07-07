@@ -1,19 +1,19 @@
-@use "sass:map";
+@use 'sass:map';
 
 $colors: (
-  "primary": #0078e7,
+  'primary': #0078e7,
 ) !default;
 
 $colors: map.merge(
   (
-    "primary-light": lighten(map.get($colors, "primary"), 20%),
-    "primary-lighter": lighten(map.get($colors, "primary"), 35%),
+    'primary-light': lighten(map.get($colors, 'primary'), 20%),
+    'primary-lighter': lighten(map.get($colors, 'primary'), 35%),
   ),
   $colors
 );
 
-@forward "../base/_var" with (
-  $theme-name: "yun",
+@forward '../base/_var' with (
+  $theme-name: 'yun',
   // basic
   $bg-color: transparent,
   // color
@@ -21,24 +21,24 @@ $colors: map.merge(
   // heading
   $heading:
     (
-      "font-weight": 300,
-      "h1": (
-        "font-size": 2.5rem,
+      'font-weight': 300,
+      'h1': (
+        'font-size': 2.5rem,
       ),
-      "h2": (
-        "font-size": 2.2rem,
+      'h2': (
+        'font-size': 2.2rem,
       ),
-      "h3": (
-        "font-size": 1.9rem,
+      'h3': (
+        'font-size': 1.9rem,
       ),
-      "h4": (
-        "font-size": 1.6rem,
+      'h4': (
+        'font-size': 1.6rem,
       ),
-      "h5": (
-        "font-size": 1.3rem,
+      'h5': (
+        'font-size': 1.3rem,
       ),
-      "h6": (
-        "font-size": 1rem,
+      'h6': (
+        'font-size': 1rem,
       ),
     ),
   // font
@@ -46,15 +46,15 @@ $colors: map.merge(
   // hr
   $hr:
     (
-      "height": 2px,
+      'height': 2px,
     ),
   // table
   $table:
     (
-      "td-border-color": map.get($colors, "primary-light"),
-      "tr-border-color": map.get($colors, "primary-light"),
-      "tr-2n-background-color": rgba(map.get($colors, "primary-light"), 0.08),
+      'td-border-color': map.get($colors, 'primary-light'),
+      'tr-border-color': map.get($colors, 'primary-light'),
+      'tr-2n-background-color': rgba(map.get($colors, 'primary-light'), 0.08),
     )
 );
 
-@use "../base/markdown";
+@use '../base/markdown';

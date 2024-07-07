@@ -1,13 +1,20 @@
-@use "sass:map";
-@use "../base/var" as *;
+@use 'sass:map';
+@use '../base/var' as *;
 
 code,
 pre {
-  font-family: "Source Code Pro", Consolas, Monaco, SFMono-Regular,
-    "Ubuntu Mono", Menlo, monospace;
+  font-family: 'Source Code Pro', Consolas, Monaco, SFMono-Regular,
+    'Ubuntu Mono', Menlo, monospace;
 }
 
 // for inline code
+h1 > code,
+h2 > code,
+h3 > code,
+h4 > code {
+  font-size: 0.9em;
+}
+
 code {
   padding: 3px 6px;
   font-size: 0.85rem;

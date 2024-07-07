@@ -1,6 +1,6 @@
-@use "sass:map";
+@use 'sass:map';
 
-$theme-name: "planet" !default;
+$theme-name: 'planet' !default;
 
 // basic
 $bg-color: transparent !default;
@@ -8,13 +8,13 @@ $text-color: #121212 !default;
 
 // color
 $colors: (
-  "primary": #000000,
+  'primary': #000000,
 ) !default;
 
 $colors: map.merge(
   (
-    "primary-light": lighten(map.get($colors, "primary"), 50%),
-    "primary-lighter": lighten(map.get($colors, "primary"), 60%),
+    'primary-light': lighten(map.get($colors, 'primary'), 50%),
+    'primary-lighter': lighten(map.get($colors, 'primary'), 60%),
   ),
   $colors
 );
@@ -25,11 +25,11 @@ $line-height: 1.5 !default;
 $font-family: () !default;
 $font-family: map.merge(
   (
-    "sans":
+    'sans':
       'Raleway, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif',
-    "serif":
+    'serif':
       "'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif",
-    "mono": 'Menlo, Monaco, Consolas, "Courier New", monospace',
+    'mono': 'Menlo, Monaco, Consolas, "Courier New", monospace',
   ),
   $font-family
 );
@@ -38,24 +38,24 @@ $font-family: map.merge(
 $heading: () !default;
 $heading: map.deep-merge(
   (
-    "font-weight": 500,
-    "h1": (
-      "font-size": 3rem,
+    'font-weight': 500,
+    'h1': (
+      'font-size': 3rem,
     ),
-    "h2": (
-      "font-size": 2.6rem,
+    'h2': (
+      'font-size': 2.6rem,
     ),
-    "h3": (
-      "font-size": 2.2rem,
+    'h3': (
+      'font-size': 2.2rem,
     ),
-    "h4": (
-      "font-size": 1.8rem,
+    'h4': (
+      'font-size': 1.8rem,
     ),
-    "h5": (
-      "font-size": 1.4rem,
+    'h5': (
+      'font-size': 1.4rem,
     ),
-    "h6": (
-      "font-size": 1rem,
+    'h6': (
+      'font-size': 1rem,
     ),
   ),
   $heading
@@ -66,7 +66,7 @@ $hr: () !default;
 $hr: map.merge(
   (
     height: 0.2rem,
-    "bg-color": #e1e4e8,
+    'bg-color': #e1e4e8,
   ),
   $hr
 );
@@ -75,8 +75,8 @@ $hr: map.merge(
 $blockquote: () !default;
 $blockquote: map.merge(
   (
-    "color": #6a737d,
-    "border-left-color": #dfe2e5,
+    'color': #6a737d,
+    'border-left-color': #dfe2e5,
   ),
   $blockquote
 );
@@ -85,9 +85,9 @@ $blockquote: map.merge(
 $table: () !default;
 $table: map.merge(
   (
-    "td-border-color": #dfe2e5,
-    "tr-border-color": #c6cbd1,
-    "tr-2n-background-color": #f6f8fa,
+    'td-border-color': #dfe2e5,
+    'tr-border-color': #c6cbd1,
+    'tr-2n-background-color': #f6f8fa,
   ),
   $table
 );

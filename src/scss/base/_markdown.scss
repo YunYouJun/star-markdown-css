@@ -1,6 +1,6 @@
-$bodyClass: ".markdown-body";
+$bodyClass: '.markdown-body';
 
-@use "./vars" as *;
+@use './vars' as *;
 
 #{$bodyClass} {
   -ms-text-size-adjust: 100%;
@@ -11,5 +11,5 @@ $bodyClass: ".markdown-body";
   font-size: 1rem;
   line-height: var(--smc-line-height);
   overflow-wrap: break-word;
-  @import "../module/all";
+  @import '../module/all';
 }

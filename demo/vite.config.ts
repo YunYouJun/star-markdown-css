@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Markdown from 'vite-plugin-vue-markdown'
@@ -8,7 +8,6 @@ import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 
 import Unocss from 'unocss/vite'
-import { presetAttributify, presetIcons, presetUno } from 'unocss'
 
 const markdownWrapperClasses = 'markdown-body'
 
@@ -41,21 +40,9 @@ export default defineConfig({
       },
     }),
 
-    // https://github.com/antfu/unocss
+    // https://github.com/unocss/unocss
     // see unocss.config.ts for config
-    Unocss({
-      shortcuts: [
-        ['icon-btn', 'shadow transition duration-200 ease-in-out hover:shadow-md'],
-      ],
-      presets: [
-        presetUno(),
-        presetAttributify(),
-        presetIcons({
-          scale: 1.2,
-          warn: true,
-        }),
-      ],
-    }),
+    Unocss(),
   ],
 
   server: {

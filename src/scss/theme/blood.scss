@@ -1,19 +1,19 @@
-@use "sass:map";
+@use 'sass:map';
 
 $colors: (
-  "primary": #be0000,
+  'primary': #be0000,
 );
 
 $colors: map.merge(
   (
-    "primary-light": lighten(map.get($colors, "primary"), 20%),
-    "primary-lighter": lighten(map.get($colors, "primary"), 35%),
+    'primary-light': lighten(map.get($colors, 'primary'), 20%),
+    'primary-lighter': lighten(map.get($colors, 'primary'), 35%),
   ),
   $colors
 );
 
-@forward "../base/_var" with (
-  $theme-name: "planet",
+@forward '../base/_var' with (
+  $theme-name: 'planet',
   // color
   $text-color: #d81e06,
   $bg-color: #141516,
@@ -21,19 +21,19 @@ $colors: map.merge(
   // font
   $font-family:
     (
-      "serif": "Noto Serif SC, serif"
+      'serif': 'Noto Serif SC, serif',
     ),
   // heading
   $heading:
     (
-      "font-weight": 900,
+      'font-weight': 900,
     ),
   // blockquote
   $blockquote:
     (
-      "color": map.get($colors, "primary"),
-      "border-left-color": map.get($colors, "primary-light"),
+      'color': map.get($colors, 'primary'),
+      'border-left-color': map.get($colors, 'primary-light'),
     )
 );
 
-@use "../base/markdown";
+@use '../base/markdown';

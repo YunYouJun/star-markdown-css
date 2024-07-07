@@ -24,15 +24,15 @@ img {
   }
 
   &::before {
-    content: "「 LOADING ERROR 」";
+    content: '「 LOADING ERROR 」';
   }
 
-  &[align="right"] {
+  &[align='right'] {
     margin-left: 1rem;
     margin-right: 0.5rem;
   }
 
-  &[align="left"] {
+  &[align='left'] {
     margin-left: 0.5rem;
     margin-right: 1rem;
   }

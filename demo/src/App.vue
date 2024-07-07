@@ -17,10 +17,9 @@ useHead({
 
 window.onhashchange = function () {
   const curTheme = location.hash.slice(1) || 'yun'
-  const href = `./css/${curTheme}-markdown.min.css`;
 
-  (document.querySelector('link[title="theme"]') as HTMLLinkElement).href
-    = `./css/${curTheme}-markdown.min.css`
+  const el = document.querySelector('link[title="theme"]') as HTMLLinkElement
+  el.href = `./css/${curTheme}-markdown.min.css`
 }
 </script>
 

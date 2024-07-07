@@ -1,42 +1,39 @@
-@use "sass:map";
+@use 'sass:map';
 
 $colors: (
-  "primary": #8e71c1,
+  'primary': #8e71c1,
 );
 
 $colors: map.merge(
   (
-    "primary-light": lighten(map.get($colors, "primary"), 20%),
-    "primary-lighter": lighten(map.get($colors, "primary"), 35%),
+    'primary-light': lighten(map.get($colors, 'primary'), 20%),
+    'primary-lighter': lighten(map.get($colors, 'primary'), 35%),
   ),
   $colors
 );
 
-@forward "../base/_var" with (
+@forward '../base/_var' with (
   // heading
-  $heading:
-    (
-      "font-weight": 300,
-    ),
+  $heading: ('font-weight': 300),
   // hr
   $hr:
     (
-      "height": 0.1rem,
-      "bg-color": map.get($colors, "primary-light"),
-      "bg":
+      'height': 0.1rem,
+      'bg-color': map.get($colors, 'primary-light'),
+      'bg':
         radial-gradient(
           ellipse at center,
-          map.get($colors, "primary-light") 0,
+          map.get($colors, 'primary-light') 0,
           rgba(255, 255, 255, 0) 100%
-        ),
+        )
     ),
   // table
   $table:
     (
-      "td-border-color": map.get($colors, "primary-light"),
-      "tr-border-color": map.get($colors, "primary-light"),
-      "tr-2n-bg-color": rgba(map.get($colors, "primary"), 0.08),
+      'td-border-color': map.get($colors, 'primary-light'),
+      'tr-border-color': map.get($colors, 'primary-light'),
+      'tr-2n-bg-color': rgba(map.get($colors, 'primary'), 0.08)
     )
 );
 
-@use "../base/markdown";
+@use '../base/markdown';

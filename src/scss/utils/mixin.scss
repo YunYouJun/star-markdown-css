@@ -1,12 +1,12 @@
-@use "config";
+@use 'config';
 
 // join var name
 // join-var-name(('button', 'text-color')) => '--#{namespace}-button-text-color'
 @function join-var-name($list) {
-  $name: "--" + config.$namespace;
+  $name: '--' + config.$namespace;
   @each $item in $list {
-    @if $item != "" {
-      $name: $name + "-" + $item;
+    @if $item != '' {
+      $name: $name + '-' + $item;
     }
   }
   @return $name;
@@ -23,7 +23,7 @@
 }
 
 // @include set-css-var-from-map($colors)
-@mixin set-css-var-from-map($map, $prefix: "") {
+@mixin set-css-var-from-map($map, $prefix: '') {
   @each $key, $value in $map {
     #{get-css-var-name($prefix, $key)}: #{$value};
   }

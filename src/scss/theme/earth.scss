@@ -1,7 +1,7 @@
-@forward "../base/_var" with (
+@forward '../base/_var' with (
   $colors: (
-    "primary": #70b7fd,
+    'primary': #70b7fd,
   )
 );
 
-@use "../base/markdown";
+@use '../base/markdown';

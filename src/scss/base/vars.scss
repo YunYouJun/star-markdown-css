@@ -1,16 +1,16 @@
-@use "sass:map";
-@use "./palette" as *;
-@use "./var" as *;
-@use "../utils/" as *;
+@use 'sass:map';
+@use './palette' as *;
+@use './var' as *;
+@use '../utils/' as *;
 
 // common
 :root {
-  @include set-css-var-from-map($font-family, "font");
+  @include set-css-var-from-map($font-family, 'font');
 }
 
 // css var
 :root {
-  @include set-css-var-from-map($colors, "c");
+  @include set-css-var-from-map($colors, 'c');
   @include set-css-var-from-map($light);
 }
 

@@ -1,28 +1,28 @@
-@use "sass:map";
-@use "./var" as *;
+@use 'sass:map';
+@use './var' as *;
 
-$c-primary: map.get($colors, "primary");
+$c-primary: map.get($colors, 'primary');
 
 // palette
 $light: () !default;
 $light: map.merge(
   (
-    "theme-name": $theme-name,
-    "line-height": $line-height,
-    "c-primary-rgb": #{red($c-primary),
+    'theme-name': $theme-name,
+    'line-height': $line-height,
+    'c-primary-rgb': #{red($c-primary),
     green(
       $c-primary,
     ),
     blue($c-primary)},
 
-    "c-text": #24292e,
-    "c-text-light": #555,
-    "c-text-lighter": #666,
+    'c-text': #24292e,
+    'c-text-light': #555,
+    'c-text-lighter': #666,
 
-    "header-bottom-color": #eaecef,
-    "border-color": var(--smc-c-primary-light),
-    "code-bg-color": #f6f8fa,
-    "link-color": darken(map.get($colors, "primary"), 10%),
+    'header-bottom-color': #eaecef,
+    'border-color': var(--smc-c-primary-light),
+    'code-bg-color': #f6f8fa,
+    'link-color': darken(map.get($colors, 'primary'), 10%),
   ),
   $light
 );
@@ -30,13 +30,13 @@ $light: map.merge(
 $dark: () !default;
 $dark: map.merge(
   (
-    "c-text": #f2f2f2,
-    "c-text-light": #ddd,
-    "c-text-lighter": #eee,
+    'c-text': #f2f2f2,
+    'c-text-light': #ddd,
+    'c-text-lighter': #eee,
 
-    "code-bg-color": #242424,
-    "link-color": lighten(map.get($colors, "primary"), 10%),
-    "header-bottom-color": #333,
+    'code-bg-color': #242424,
+    'link-color': lighten(map.get($colors, 'primary'), 10%),
+    'header-bottom-color': #333,
   ),
   $dark
 );

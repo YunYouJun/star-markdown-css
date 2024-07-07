@@ -1,5 +1,5 @@
-@use "sass:map";
-@use "../base/var" as *;
+@use 'sass:map';
+@use '../base/var' as *;
 
 strong {
   font-family: var(--smc-font-serif);
@@ -21,7 +21,7 @@ h5,
 h6 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  font-weight: map.get($heading, "font-weight");
+  font-weight: map.get($heading, 'font-weight');
   line-height: 1.5;
   .octicon-link {
     color: #1b1f23;
@@ -37,29 +37,29 @@ h6 {
 }
 
 h1 {
-  font-size: map.get($heading, "h1", "font-size");
+  font-size: map.get($heading, 'h1', 'font-size');
   border-bottom: 1px solid var(--smc-header-bottom-color);
 }
 
 h2 {
-  font-size: map.get($heading, "h2", "font-size");
+  font-size: map.get($heading, 'h2', 'font-size');
   border-bottom: 1px solid var(--smc-header-bottom-color);
 }
 
 h3 {
-  font-size: map.get($heading, "h3", "font-size");
+  font-size: map.get($heading, 'h3', 'font-size');
 }
 
 h4 {
-  font-size: map.get($heading, "h4", "font-size");
+  font-size: map.get($heading, 'h4', 'font-size');
 }
 
 h5 {
-  font-size: map.get($heading, "h5", "font-size");
+  font-size: map.get($heading, 'h5', 'font-size');
 }
 
 h6 {
-  font-size: map.get($heading, "h6", "font-size");
+  font-size: map.get($heading, 'h6', 'font-size');
 }
 
 @media screen and (max-width: 768px) {
