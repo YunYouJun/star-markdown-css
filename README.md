@@ -24,7 +24,7 @@
 
 ### Download
 
-- Download [manually](https://github.com/YunYouJun/star-markdown-css/archive/master.zip)
+- Download [manually](https://github.com/YunYouJun/star-markdown-css/archive/main.zip)
 
 ### CDN
 
