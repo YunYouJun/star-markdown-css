@@ -1,10 +1,10 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'unplugin-vue-markdown/vite'
 
 import TaskLists from 'markdown-it-task-lists'
-import Prism from 'markdown-it-prism'
+import Shiki from '@shikijs/markdown-it'
 import LinkAttributes from 'markdown-it-link-attributes'
 
 import Unocss from 'unocss/vite'
@@ -26,16 +26,21 @@ export default defineConfig({
     Markdown({
       wrapperClasses: markdownWrapperClasses,
       headEnabled: true,
-      markdownItSetup(md) {
-        // https://prismjs.com/
-        md.use(Prism)
+      async markdownItSetup(md) {
         md.use(LinkAttributes, {
-          pattern: /^https?:\/\//,
+          matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
             rel: 'noopener',
           },
         })
+        md.use(await Shiki({
+          defaultColor: false,
+          themes: {
+            light: 'vitesse-light',
+            dark: 'vitesse-dark',
+          },
+        }))
         md.use(TaskLists)
       },
     }),
@@ -49,13 +54,5 @@ export default defineConfig({
     fs: {
       strict: true,
     },
-  },
-
-  optimizeDeps: {
-    include: [
-      'vue',
-      '@vueuse/core',
-      '@vueuse/head',
-    ],
   },
 })
