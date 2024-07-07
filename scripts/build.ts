@@ -20,12 +20,12 @@ export async function scss(theme: string) {
   })
 
   // write
-  const distPath = path.resolve(config.distFolder, 'css', `${theme}-markdown.css`)
+  const distPath = path.resolve(config.distFolder, `${theme}-markdown.css`)
   await fs.outputFile(distPath, result.css)
 
   // clean css
   const clean = new CleanCSS().minify(result.css)
-  const cleanDistPath = path.resolve(config.distFolder, 'css', theme, `${theme}-markdown.min.css`)
+  const cleanDistPath = path.resolve(config.distFolder, theme, `${theme}-markdown.min.css`)
   await fs.outputFile(cleanDistPath, clean.styles)
 
   // show size
