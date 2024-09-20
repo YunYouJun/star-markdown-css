@@ -1,7 +1,7 @@
 {
   "name": "star-markdown-css",
   "type": "module",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "packageManager": "pnpm@9.11.0",
   "description": "Markdown Css about starry.",
   "author": "YunYouJun <me@yunyoujun.cn>",
