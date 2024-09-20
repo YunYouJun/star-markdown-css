@@ -1,10 +1,10 @@
 import path from 'node:path'
-import consola from 'consola'
-import * as sass from 'sass'
-import fs from 'fs-extra'
 import chalk from 'chalk'
 import CleanCSS from 'clean-css'
+import consola from 'consola'
+import fs from 'fs-extra'
 import { gzipSize } from 'gzip-size'
+import * as sass from 'sass'
 import { config } from './config'
 
 export async function scss(theme: string) {

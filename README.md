@@ -49,10 +49,7 @@ npm install star-markdown-css
 Just use css with link tag.
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css" />
 ```
 
 #### Example In HTML
@@ -62,10 +59,7 @@ In html.
 ```html
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css" />
   <style>
     .markdown-body {
       box-sizing: border-box;

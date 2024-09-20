@@ -8,9 +8,7 @@
     <link rel="icon" type="image/png" href="./img/planet.png" />
     <script>
       ;(function () {
-        const prefersDark =
-          window.matchMedia &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
         if (setting === 'dark' || (prefersDark && setting !== 'light'))
           document.documentElement.classList.toggle('dark', true)
@@ -22,14 +20,7 @@
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
 
-    <github-corners
-      repo="YunYouJun/star-markdown-css"
-      blank
-      fill="#0078e7"
-    ></github-corners>
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/wc-github-corners@latest"
-    ></script>
+    <github-corners repo="YunYouJun/star-markdown-css" blank fill="#0078e7"></github-corners>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/wc-github-corners@latest"></script>
   </body>
 </html>

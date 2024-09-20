@@ -1,17 +1,25 @@
 import path from 'node:path'
-import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import Markdown from 'unplugin-vue-markdown/vite'
-
-import TaskLists from 'markdown-it-task-lists'
 import Shiki from '@shikijs/markdown-it'
+import Vue from '@vitejs/plugin-vue'
 import LinkAttributes from 'markdown-it-link-attributes'
 
+import TaskLists from 'markdown-it-task-lists'
 import Unocss from 'unocss/vite'
+import Markdown from 'unplugin-vue-markdown/vite'
+
+import { defineConfig } from 'vite'
 
 const markdownWrapperClasses = 'markdown-body'
 
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
+  },
+
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,

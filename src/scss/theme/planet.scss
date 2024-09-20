@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'sass:map';
 
 $colors: (
@@ -6,8 +7,8 @@ $colors: (
 
 $colors: map.merge(
   (
-    'primary-light': lighten(map.get($colors, 'primary'), 20%),
-    'primary-lighter': lighten(map.get($colors, 'primary'), 35%),
+    'primary-light': color.adjust(map.get($colors, 'primary'), $lightness: 20%),
+    'primary-lighter': color.adjust(map.get($colors, 'primary'), $lightness: 35%),
   ),
   $colors
 );
@@ -20,12 +21,7 @@ $colors: map.merge(
     (
       'height': 0.1rem,
       'bg-color': map.get($colors, 'primary-light'),
-      'bg':
-        radial-gradient(
-          ellipse at center,
-          map.get($colors, 'primary-light') 0,
-          rgba(255, 255, 255, 0) 100%
-        )
+      'bg': radial-gradient(ellipse at center, map.get($colors, 'primary-light') 0, rgba(255, 255, 255, 0) 100%)
     ),
   // table
   $table:

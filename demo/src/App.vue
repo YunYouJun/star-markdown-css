@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
 
-import Intro from './components/intro.md'
-import Demo from './components/demo.md'
 import BaseMenu from './components/BaseMenu.vue'
+import Demo from './components/demo.md'
+import Intro from './components/intro.md'
 
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,

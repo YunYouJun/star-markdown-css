@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'sass:map';
 @use './var' as *;
 
@@ -9,12 +10,14 @@ $light: map.merge(
   (
     'theme-name': $theme-name,
     'line-height': $line-height,
-    'c-primary-rgb': #{red($c-primary),
-    green(
+    // 'c-primary-rgb': #{red($c-primary),
+    'c-primary-rgb': #{color.channel($c-primary, 'red', $space: rgb),
+    color.channel(
       $c-primary,
+      'green',
+      $space: rgb,
     ),
-    blue($c-primary)},
-
+    color.channel($c-primary, 'blue', $space: rgb)},
     'c-text': #24292e,
     'c-text-light': #555,
     'c-text-lighter': #666,
@@ -22,7 +25,7 @@ $light: map.merge(
     'header-bottom-color': #eaecef,
     'border-color': var(--smc-c-primary-light),
     'code-bg-color': #f6f8fa,
-    'link-color': darken(map.get($colors, 'primary'), 10%),
+    'link-color': color.adjust(map.get($colors, 'primary'), $lightness: -10%),
   ),
   $light
 );
@@ -35,7 +38,7 @@ $dark: map.merge(
     'c-text-lighter': #eee,
 
     'code-bg-color': #242424,
-    'link-color': lighten(map.get($colors, 'primary'), 10%),
+    'link-color': color.adjust(map.get($colors, 'primary'), $lightness: 10%),
     'header-bottom-color': #333,
   ),
   $dark

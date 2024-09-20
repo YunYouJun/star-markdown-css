@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'sass:map';
 
 $theme-name: 'planet' !default;
@@ -13,8 +14,8 @@ $colors: (
 
 $colors: map.merge(
   (
-    'primary-light': lighten(map.get($colors, 'primary'), 50%),
-    'primary-lighter': lighten(map.get($colors, 'primary'), 60%),
+    'primary-light': color.adjust(map.get($colors, 'primary'), $lightness: 50%),
+    'primary-lighter': color.adjust(map.get($colors, 'primary'), $lightness: 60%),
   ),
   $colors
 );
@@ -25,10 +26,8 @@ $line-height: 1.5 !default;
 $font-family: () !default;
 $font-family: map.merge(
   (
-    'sans':
-      'Raleway, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif',
-    'serif':
-      "'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif",
+    'sans': 'Raleway, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif',
+    'serif': "'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif",
     'mono': 'Menlo, Monaco, Consolas, "Courier New", monospace',
   ),
   $font-family

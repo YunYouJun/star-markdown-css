@@ -2,7 +2,7 @@
   "name": "star-markdown-css",
   "type": "module",
   "version": "0.5.1",
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.11.0",
   "description": "Markdown Css about starry.",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
@@ -35,25 +35,25 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.21.3",
+    "@antfu/eslint-config": "^3.7.1",
     "@types/clean-css": "^4.2.11",
     "@types/fs-extra": "^11.0.4",
     "@types/markdown-it-link-attributes": "^3.0.5",
-    "@types/node": "^20.14.10",
+    "@types/node": "^22.5.5",
     "@types/sass": "^1.45.0",
-    "@unocss/eslint-plugin": "^0.61.3",
+    "@unocss/eslint-plugin": "^0.62.4",
     "@yunyoujun/logger": "^0.3.5",
-    "bumpp": "^9.4.1",
+    "bumpp": "^9.5.2",
     "clean-css": "^5.3.3",
     "consola": "^3.2.3",
-    "eslint": "^9.6.0",
+    "eslint": "^9.11.0",
     "eslint-plugin-format": "^0.1.2",
     "fs-extra": "^11.2.0",
     "gzip-size": "^7.0.0",
-    "sass": "^1.77.6",
-    "tsx": "^4.16.2",
-    "typescript": "^5.5.3",
+    "sass": "^1.79.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
     "unbuild": "^2.0.0",
-    "vue-tsc": "^2.0.26"
+    "vue-tsc": "^2.1.6"
   }
 }

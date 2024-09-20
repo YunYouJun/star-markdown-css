@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
 import { createHead } from '@vueuse/head'
+import { createApp } from 'vue'
 import App from './App.vue'
 
 import './styles/index.scss'
