@@ -1,6 +1,7 @@
-$bodyClass: '.markdown-body';
-
+@use 'sass:meta';
 @use './vars' as *;
+
+$bodyClass: '.markdown-body';
 
 #{$bodyClass} {
   -ms-text-size-adjust: 100%;
@@ -11,5 +12,6 @@ $bodyClass: '.markdown-body';
   font-size: 1rem;
   line-height: var(--smc-line-height);
   overflow-wrap: break-word;
-  @import '../module/all';
+
+  @include meta.load-css('../module/all');
 }
