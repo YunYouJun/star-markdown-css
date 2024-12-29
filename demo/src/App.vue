@@ -15,7 +15,7 @@ useHead({
   ],
   link: [
     { rel: 'stylesheet', href: './css/yun/markdown.min.css', title: 'theme' },
-  ]
+  ],
 })
 
 window.onhashchange = () => {
