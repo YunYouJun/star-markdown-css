@@ -7,7 +7,7 @@
 [![npm](https://img.shields.io/npm/dt/star-markdown-css.svg)](https://npm-stat.com/charts.html?package=star-markdown-css)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/star-markdown-css.svg)
 ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/star-markdown-css.svg)
-[![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/star-markdown-css)](https://cdn.jsdelivr.net/npm/star-markdown-css/dist/yun/yun-markdown.min.css)
+[![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/star-markdown-css)](https://cdn.jsdelivr.net/npm/star-markdown-css/dist/yun/markdown.min.css)
 
 - [Demo](https://yunyoujun.github.io/star-markdown-css/)
 
@@ -28,8 +28,8 @@
 
 ### CDN
 
-- JSDELIVR: <https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css>
-- unpkg: <https://unpkg.com/star-markdown-css/dist/planet/planet-markdown.min.css>
+- JSDELIVR: <https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/markdown.min.css>
+- unpkg: <https://unpkg.com/star-markdown-css/dist/planet/markdown.min.css>
 
 ### Yarn Or NPM
 
@@ -49,7 +49,7 @@ npm install star-markdown-css
 Just use css with link tag.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/markdown.min.css" />
 ```
 
 #### Example In HTML
@@ -59,7 +59,7 @@ In html.
 ```html
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/planet-markdown.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css/dist/planet/markdown.min.css" />
   <style>
     .markdown-body {
       box-sizing: border-box;

@@ -20,7 +20,7 @@
     "planet",
     "blood"
   ],
-  "main": "dist/planet/planet-markdown.min.css",
+  "main": "dist/yun/markdown.min.css",
   "files": [
     "dist/**/*.css",
     "src/**/*.scss"
@@ -32,7 +32,8 @@
     "dev": "pnpm -C demo run dev",
     "lint": "eslint .",
     "release": "bumpp --commit --push --tag",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.1",
@@ -53,6 +54,7 @@
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "unbuild": "^3.2.0",
+    "vitest": "^2.1.8",
     "vue-tsc": "^2.2.0"
   }
 }

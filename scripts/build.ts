@@ -5,6 +5,7 @@ import consola from 'consola'
 import fs from 'fs-extra'
 import { gzipSize } from 'gzip-size'
 import * as sass from 'sass'
+import { themes } from '../config'
 import { config } from './config'
 
 export async function scss(theme: string) {
@@ -61,7 +62,6 @@ export async function build() {
   await clean()
 
   consola.start('Building...')
-  const themes = ['yun', 'planet', 'blood', 'earth']
   // all scss task
   await Promise.all(
     themes.map((theme) => {
