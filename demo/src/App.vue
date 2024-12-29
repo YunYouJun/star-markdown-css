@@ -13,13 +13,16 @@ useHead({
   meta: [
     { name: 'description', content: 'Star Markdown CSS Demo' },
   ],
+  link: [
+    { rel: 'stylesheet', href: './css/yun/markdown.min.css', title: 'theme' },
+  ]
 })
 
-window.onhashchange = function () {
+window.onhashchange = () => {
   const curTheme = location.hash.slice(1) || 'yun'
 
   const el = document.querySelector('link[title="theme"]') as HTMLLinkElement
-  el.href = `./css/${curTheme}-markdown.min.css`
+  el.href = `./css/${curTheme}/markdown.min.css`
 }
 </script>
 

@@ -25,7 +25,7 @@ export async function scss(theme: string) {
 
   // clean css
   const clean = new CleanCSS().minify(result.css)
-  const cleanDistPath = path.resolve(config.distFolder, theme, `${theme}-markdown.min.css`)
+  const cleanDistPath = path.resolve(config.distFolder, theme, `markdown.min.css`)
   await fs.outputFile(cleanDistPath, clean.styles)
 
   // show size
@@ -68,6 +68,9 @@ export async function build() {
       return scss(theme)
     }),
   )
+
+  // copy to demo/public/css
+  await fs.copy(config.distFolder, path.resolve(config.demoFolder, 'public', 'css'))
 }
 
 build()

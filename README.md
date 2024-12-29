@@ -9,7 +9,7 @@
 ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/star-markdown-css.svg)
 [![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/star-markdown-css)](https://cdn.jsdelivr.net/npm/star-markdown-css/dist/yun/yun-markdown.min.css)
 
-- [Demo](https://smc.yunyoujun.cn)
+- [Demo](https://yunyoujun.github.io/star-markdown-css/)
 
 ## Theme
 

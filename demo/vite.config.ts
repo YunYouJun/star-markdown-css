@@ -8,10 +8,14 @@ import Unocss from 'unocss/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
 
 import { defineConfig } from 'vite'
+import repoPkg from '../package.json'
 
 const markdownWrapperClasses = 'markdown-body'
 
 export default defineConfig({
+  // for GitHub Pages
+  base: `/${repoPkg.name}/`,
+
   css: {
     preprocessorOptions: {
       scss: {

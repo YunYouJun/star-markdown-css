@@ -20,18 +20,15 @@ $colors: map.merge(
   $bg-color: #141516,
   $colors: $colors,
   // font
-  $font-family:
-    (
+  $font-family: (
       'serif': 'Noto Serif SC, serif',
     ),
   // heading
-  $heading:
-    (
+  $heading: (
       'font-weight': 900,
     ),
   // blockquote
-  $blockquote:
-    (
+  $blockquote: (
       'color': map.get($colors, 'primary'),
       'border-left-color': map.get($colors, 'primary-light'),
     )

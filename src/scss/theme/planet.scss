@@ -17,15 +17,13 @@ $colors: map.merge(
   // heading
   $heading: ('font-weight': 300),
   // hr
-  $hr:
-    (
+  $hr: (
       'height': 0.1rem,
       'bg-color': map.get($colors, 'primary-light'),
       'bg': radial-gradient(ellipse at center, map.get($colors, 'primary-light') 0, rgba(255, 255, 255, 0) 100%)
     ),
   // table
-  $table:
-    (
+  $table: (
       'td-border-color': map.get($colors, 'primary-light'),
       'tr-border-color': map.get($colors, 'primary-light'),
       'tr-2n-bg-color': rgba(map.get($colors, 'primary'), 0.08)

@@ -20,8 +20,7 @@ $colors: map.merge(
   // color
   $colors: $colors,
   // heading
-  $heading:
-    (
+  $heading: (
       'font-weight': 300,
       'h1': (
         'font-size': 2.5rem,
@@ -45,13 +44,11 @@ $colors: map.merge(
   // font
   $line-height: 1.8,
   // hr
-  $hr:
-    (
+  $hr: (
       'height': 2px,
     ),
   // table
-  $table:
-    (
+  $table: (
       'td-border-color': map.get($colors, 'primary-light'),
       'tr-border-color': map.get($colors, 'primary-light'),
       'tr-2n-background-color': rgba(map.get($colors, 'primary-light'), 0.08),
