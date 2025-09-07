@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="star-markdown-css demo" />
+    <title>Star Markdown CSS Demo</title>
+    <link rel="icon" type="image/png" href="./img/planet.png" />
+    <script>
+      ;(function () {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+        if (setting === 'dark' || (prefersDark && setting !== 'light'))
+          document.documentElement.classList.toggle('dark', true)
+      })()
+    </script>
+    <script type="module" crossorigin src="/star-markdown-css/assets/index-CY5fj60h.js"></script>
+    <link rel="stylesheet" crossorigin href="/star-markdown-css/assets/index-Bo1k1tYv.css">
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <github-corners repo="YunYouJun/star-markdown-css" blank fill="#0078e7"></github-corners>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/wc-github-corners@latest"></script>
+  </body>
+</html>
