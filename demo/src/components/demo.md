@@ -69,7 +69,6 @@ Ordered
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
-
    1. TEST
    2. TEST
    3. TEST
@@ -108,7 +107,7 @@ You can visit [highlight](https://github.com/highlightjs/highlight.js)
 or [Prism](https://github.com/PrismJS/prism).
 
 ```js
-const foo = function (bar) {
+function foo(bar) {
   return bar++
 }
 
