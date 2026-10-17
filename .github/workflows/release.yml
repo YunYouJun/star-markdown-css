@@ -5,18 +5,25 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  # changelogithub creates the GitHub release
+  contents: write
+  # npm Trusted Publishing (OIDC), no NPM_TOKEN needed
+  id-token: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Set node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           registry-url: https://registry.npmjs.org/
+          # Trusted Publishing requires npm >= 11.5.1
           node-version: lts/*
 
       - name: Setup
@@ -30,5 +37,3 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
