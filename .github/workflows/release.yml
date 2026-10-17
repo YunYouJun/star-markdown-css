@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - 'v*'
+  # stage the current package.json version again without a new tag
+  workflow_dispatch:
 
 permissions:
   # changelogithub creates the GitHub release
@@ -33,7 +35,10 @@ jobs:
         run: nci
 
       - run: npx changelogithub
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-      - run: npm publish
+      # Trusted publishers may only stage; approve with 2FA on npmjs.com
+      # or via `npm stage approve <stage-id>` to make the version live.
+      - run: npm stage publish
