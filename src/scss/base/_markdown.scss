@@ -15,3 +15,9 @@ $bodyClass: '.markdown-body';
 
   @include meta.load-css('../module/all');
 }
+
+// Media styles use :where() so they only carry element-level specificity,
+// letting utility classes on images (e.g. `rounded-full`, `m-0`) override them.
+:where(#{$bodyClass}) {
+  @include meta.load-css('../module/media');
+}
